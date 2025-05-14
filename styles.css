@@ -1,18 +1,32 @@
 /* Minimalist Portfolio - Base Styles and Variables */
 :root {
-  --primary-color: #0077cc;
-  --secondary-color: #f8f9fa;
-  --accent-color: #6c757d;
-  --text-color: #212529;
-  --bg-color: #ffffff;
-  --card-bg: rgba(248, 249, 250, 0.9);
-  --card-hover-bg: rgba(248, 249, 250, 1);
+  /* Dark Theme Colors */
+  --primary-color: #00aaff; /* A brighter blue for dark mode */
+  --secondary-color: #2a2a2a; /* Dark gray for secondary elements */
+  --accent-color: #bb86fc;  /* A vibrant accent for dark mode */
+  --text-color: #e0e0e0;     /* Light gray for text */
+  --bg-color: #121212;       /* Very dark gray/black for background */
+  --card-bg: rgba(30, 30, 30, 0.95); /* Darker card background */
+  --card-hover-bg: rgba(45, 45, 45, 1); /* Slightly lighter card hover */
+  --border-color: #3a3a3a; /* Subtle border color for dark mode */
+
+  /* Original Light Theme Colors (can be kept for toggling)
+  --primary-color-light: #0077cc;
+  --secondary-color-light: #f8f9fa;
+  --accent-color-light: #6c757d;
+  --text-color-light: #212529;
+  --bg-color-light: #ffffff;
+  --card-bg-light: rgba(248, 249, 250, 0.9);
+  --card-hover-bg-light: rgba(248, 249, 250, 1);
+  --border-color-light: #eee;
+  */
+
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s ease;
   --font-heading: 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Helvetica Neue', Arial, sans-serif;
-  --shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
 }
 
 * {
@@ -23,7 +37,7 @@
 
 body {
   font-family: var(--font-body);
-  font-size: 0.875rem; /* Smaller base font size */
+  font-size: 0.875rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.5;
@@ -44,13 +58,13 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 500; /* Lighter weight for more minimalist feel */
+  font-weight: 500;
   margin-bottom: 0.75rem;
-  color: #000;
+  color: var(--text-color); /* Changed from #000 to var(--text-color) */
 }
 
 h1 {
-  font-size: 2.5rem; /* Smaller heading */
+  font-size: 2.5rem;
   letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
 }
@@ -86,8 +100,8 @@ p {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color);
-  opacity: 0.3; /* More subtle particles */
+  /* background-color: var(--bg-color); -- Already set on body, can be removed or adjusted if needed for layering */
+  opacity: 0.1; /* Adjusted opacity for dark theme visibility */
   z-index: -1;
 }
 
@@ -98,7 +112,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--bg-color);
+  background: var(--bg-color); /* Use dark background */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,6 +156,7 @@ p {
   font-size: 0.875rem;
   letter-spacing: 1px;
   animation: pulse 1.5s infinite;
+  color: var(--text-color); /* Ensure loading text is visible */
 }
 
 @keyframes pulse {
@@ -173,7 +188,7 @@ p {
 
 .hero-content h2 {
   font-size: 1.1rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Use accent color for subheading */
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
@@ -189,7 +204,7 @@ p {
   align-items: center;
   margin-bottom: 2rem;
   font-size: 0.9rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Use accent color */
 }
 
 .typing-text {
@@ -199,7 +214,7 @@ p {
 .cursor {
   display: inline-block;
   width: 2px;
-  background: var(--accent-color);
+  background: var(--accent-color); /* Use accent color */
   animation: blink 1s infinite;
 }
 
@@ -227,20 +242,22 @@ p {
   border-radius: 2px;
   cursor: pointer;
   transition: all var(--transition-fast);
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color); /* Use dark theme border color */
   font-size: 0.8rem;
   letter-spacing: 0.5px;
 }
 
 .menu-item:hover {
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Text color on hover for primary background */
   transform: translateY(-2px);
+  border-color: var(--primary-color);
 }
 
 .menu-item.active {
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Text color for active item */
+  border-color: var(--primary-color);
 }
 
 .menu-item i {
@@ -262,7 +279,7 @@ p {
   width: 85%;
   max-width: 1000px;
   max-height: 80vh;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card-bg); /* Use dark card background */
   border-radius: 4px;
   box-shadow: var(--shadow);
   display: flex;
@@ -281,12 +298,12 @@ p {
 }
 
 .section-header {
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Use dark secondary color for header */
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color); /* Use dark border color */
 }
 
 .section-header h2 {
@@ -308,10 +325,11 @@ p {
   background: transparent;
   border-radius: 50%;
   transition: all var(--transition-fast);
+  color: var(--text-color); /* Ensure close button icon is visible */
 }
 
 .close-btn:hover {
-  background: #eee;
+  background: var(--border-color); /* Use a slightly lighter dark for hover */
   color: var(--primary-color);
 }
 
@@ -320,6 +338,18 @@ p {
   overflow-y: auto;
   max-height: calc(80vh - 70px);
 }
+
+/* Fix for content distortion: Initially hide elements that will be animated */
+.section-content h2,
+.section-content h3,
+.section-content p,
+.section-content ul,
+.project-card,
+.skill-category,
+.timeline-item {
+  opacity: 0; /* Start with opacity 0 to prevent FOUC */
+}
+
 
 /* About Section - Minimalist */
 .about-grid {
@@ -337,18 +367,18 @@ p {
 .img-placeholder {
   width: 180px;
   height: 180px;
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Use dark secondary color */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #eee;
+  border: 2px solid var(--border-color); /* Use dark border color */
   overflow: hidden;
 }
 
 .img-placeholder i {
   font-size: 5rem;
-  color: #ccc;
+  color: var(--accent-color); /* Use accent color for placeholder icon */
 }
 
 .about-text p {
@@ -365,7 +395,7 @@ p {
 
 .stat {
   text-align: center;
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Use dark secondary color */
   padding: 0.75rem;
   border-radius: 4px;
   transition: transform var(--transition-fast);
@@ -385,6 +415,7 @@ p {
 .stat-label {
   font-size: 0.75rem;
   opacity: 0.8;
+  color: var(--text-color);
 }
 
 /* Skills Section - Minimalist */
@@ -395,7 +426,7 @@ p {
 }
 
 .skill-category {
-  background: var(--card-bg);
+  background: var(--card-bg); /* Use dark card background */
   padding: 1.25rem;
   border-radius: 4px;
   transition: transform var(--transition-fast), background var(--transition-fast);
@@ -404,7 +435,7 @@ p {
 
 .skill-category:hover {
   transform: translateY(-3px);
-  background: var(--card-hover-bg);
+  background: var(--card-hover-bg); /* Use dark card hover background */
 }
 
 .skill-category h3 {
@@ -428,17 +459,19 @@ p {
 }
 
 .skill-pill {
-  background: #f1f3f5;
+  background: var(--secondary-color); /* Use dark secondary for pills */
+  color: var(--text-color); /* Text color for pills */
   padding: 0.25rem 0.75rem;
   border-radius: 2px;
   transition: all var(--transition-fast);
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color); /* Use dark border color */
   font-size: 0.75rem;
 }
 
 .skill-pill:hover {
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Dark text on primary background */
+  border-color: var(--primary-color);
 }
 
 /* Projects Section - Minimalist */
@@ -449,7 +482,7 @@ p {
 }
 
 .project-card {
-  background: var(--card-bg);
+  background: var(--card-bg); /* Use dark card background */
   padding: 1.25rem;
   border-radius: 4px;
   transition: transform var(--transition-fast), background var(--transition-fast);
@@ -471,7 +504,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-3px);
-  background: var(--card-hover-bg);
+  background: var(--card-hover-bg); /* Use dark card hover background */
 }
 
 .project-card:hover::before {
@@ -495,10 +528,10 @@ p {
 
 .project-tags span {
   font-size: 0.7rem;
-  background: #f1f3f5;
+  background: var(--secondary-color); /* Dark secondary for tags */
+  color: var(--text-color); /* Text color for tags */
   padding: 0.15rem 0.5rem;
   border-radius: 2px;
-  color: var(--accent-color);
 }
 
 .project-links {
@@ -513,10 +546,12 @@ p {
   gap: 5px;
   transition: all var(--transition-fast);
   font-size: 0.8rem;
+  color: var(--primary-color); /* Ensure link color is from variable */
 }
 
 .project-link:hover {
   transform: translateY(-2px);
+  color: var(--accent-color); /* Hover color for links */
 }
 
 .project-link i {
@@ -536,7 +571,7 @@ p {
   top: 0;
   height: 100%;
   width: 1px;
-  background: #eee;
+  background: var(--border-color); /* Dark border color for timeline line */
 }
 
 .timeline-item {
@@ -546,17 +581,39 @@ p {
 
 .timeline-marker {
   position: absolute;
-  left: -40px;
+  left: -40px; /* This was causing the marker to be at -25px from the line because padding-left is 40px and left is -40px of the content, but the line is at 15px. Let's adjust this. Line is at 15px, marker is 30px wide. So marker.left = 15 - (30/2) = 0 relative to timeline parent. Then shift it to align with timeline::before. */
+  /* left: 0; */ /* Adjusted based on visual alignment needs with the line */
+  /* To place it centered on the line (15px from left of .timeline): left: calc(15px - 15px) = 0px; if we shift it from content this will be: left: -25px if content has no padding, but content has 40px */
+  /* The original -40px was relative to the timeline-content. Let's keep it relative to the overall .timeline so it aligns with the ::before */
+  /* Corrected positioning for marker: relative to timeline div, line is at 15px. Marker width 30px. left should be 15px - (30px/2) = 0.
+     However, current setup is based on padding-left: 40px on .timeline. Marker is absolute to .timeline-item. 
+     Let's make the marker absolute to .timeline for simpler math:
+     .timeline-marker { left: 0; transform: translateX(-50%); top:0; } if timeline::before left:15px, marker left: 15px, transform: translateX(-50%)
+     Sticking with current structure for minimal changes:
+  */
+  left: calc(-40px + 15px - (30px / 2)); /* Trying to center it on the 1px line that is 15px from the timeline's left edge */
+  left: -25px; /* Simpler: if timeline padding-left is 40, and the line is at 15px inside that, the marker needs to be at 15px - (marker_width/2) relative to .timeline's edge.
+                   Current: marker is child of .timeline-item, which is sibling to .timeline::before.
+                   .timeline-item gets default positioning.
+                   To place marker (width 30px) centered on the line at left:15px of .timeline:
+                   Effective marker position: (padding-left of .timeline = 40px) - (distance from .timeline-item's left edge to marker's left edge)
+                   The marker should be positioned such that its center aligns with the `timeline::before` which is at `left: 15px;`.
+                   So, for a 30px wide marker, its left edge should be at `15px - (30px / 2) = 0px` relative to `.timeline`.
+                   Since `.timeline-item` starts after the 40px padding, to bring the marker to `0px` of `.timeline`, it needs `left: -40px`.
+                   To bring it to `15px - 15px = 0` from the padding edge: left: -40px will place it at the very start of the padded area.
+                   To center it on the line at 15px:
+                   marker's left from timeline-item's left edge = - (40px - 15px + 15px) = -40px (to get to edge of padding) then + 15px (to get to line) - 15px (half marker width) = -25px
+  */
   top: 0;
   width: 30px;
   height: 30px;
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Dark secondary for marker */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color); /* Dark border */
 }
 
 .timeline-marker i {
@@ -565,7 +622,7 @@ p {
 }
 
 .timeline-content {
-  background: var(--card-bg);
+  background: var(--card-bg); /* Dark card background */
   padding: 1.25rem;
   border-radius: 4px;
   transition: transform var(--transition-fast), background var(--transition-fast);
@@ -575,17 +632,17 @@ p {
 
 .timeline-content:hover {
   transform: translateX(3px);
-  background: var(--card-hover-bg);
+  background: var(--card-hover-bg); /* Dark card hover */
 }
 
 .timeline-date {
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  background: #f1f3f5;
+  background: var(--secondary-color); /* Dark secondary for date pill */
   border-radius: 2px;
   margin-bottom: 0.4rem;
   font-size: 0.75rem;
-  color: var(--accent-color);
+  color: var(--text-color); /* Text color for date */
 }
 
 .timeline-content h3 {
@@ -594,7 +651,7 @@ p {
 }
 
 .timeline-content h4 {
-  color: #666;
+  color: var(--accent-color); /* Use accent color for subtitle */
   font-size: 0.9rem;
   margin: 0.3rem 0;
 }
@@ -642,7 +699,7 @@ p {
   color: var(--primary-color);
   width: 35px;
   height: 35px;
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Dark secondary for icon bg */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -656,6 +713,7 @@ p {
 
 .contact-item p {
   font-size: 0.8rem;
+  color: var(--text-color); /* Ensure text color is applied */
 }
 
 .social-links {
@@ -667,7 +725,8 @@ p {
 .social-link {
   width: 30px;
   height: 30px;
-  background: #f8f9fa;
+  background: var(--secondary-color); /* Dark secondary for social icon bg */
+  color: var(--text-color); /* Icon color */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -677,7 +736,7 @@ p {
 
 .social-link:hover {
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Dark text on primary background */
   transform: translateY(-2px);
 }
 
@@ -686,7 +745,7 @@ p {
 }
 
 .contact-form {
-  background: var(--card-bg);
+  background: var(--card-bg); /* Dark card background for form */
   padding: 1.25rem;
   border-radius: 4px;
   box-shadow: var(--shadow);
@@ -700,16 +759,17 @@ p {
   display: block;
   margin-bottom: 0.3rem;
   font-size: 0.8rem;
+  color: var(--text-color); /* Label color */
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.6rem;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--secondary-color); /* Dark input background */
+  border: 1px solid var(--border-color); /* Dark border for inputs */
   border-radius: 2px;
-  color: var(--text-color);
+  color: var(--text-color); /* Text color for input */
   font-family: inherit;
   font-size: 0.8rem;
   transition: border-color var(--transition-fast);
@@ -723,7 +783,7 @@ p {
 
 .submit-btn {
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Dark text on primary button */
   border: none;
   padding: 0.6rem 1.25rem;
   border-radius: 2px;
@@ -734,7 +794,8 @@ p {
 }
 
 .submit-btn:hover {
-  background: #0069d9;
+  background: var(--accent-color); /* Use accent for hover, or a lighter primary */
+  color: #121212;
   transform: translateY(-2px);
 }
 
@@ -746,9 +807,10 @@ p {
   padding: 0.75rem;
   text-align: center;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(18, 18, 18, 0.9); /* Dark footer background */
   font-size: 0.75rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color); /* Dark border top */
+  color: var(--text-color); /* Footer text color */
 }
 
 .footer-content {
@@ -759,7 +821,7 @@ p {
 }
 
 #footer i.fa-heart {
-  color: #dc3545;
+  color: #e25555; /* Adjusted heart color for dark theme if needed */
   font-size: 0.7rem;
 }
 
@@ -770,7 +832,7 @@ p {
   width: 35px;
   height: 35px;
   background: var(--primary-color);
-  color: white;
+  color: #121212; /* Dark text on primary button */
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -790,11 +852,11 @@ p {
 }
 
 #back-to-top:hover {
-  background: #0069d9;
+  background: var(--accent-color); /* Use accent for hover */
   transform: translateY(-2px);
 }
 
-/* Animations - Simplified */
+/* Animations - Simplified (No changes needed here for theme) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -840,7 +902,7 @@ p {
   animation: slideInRight 0.4s ease-out forwards;
 }
 
-/* Responsive Styles */
+/* Responsive Styles (No changes needed here for theme, but review if any fixed colors were used) */
 @media (max-width: 1024px) {
   h1 {
     font-size: 2.2rem;
@@ -889,7 +951,7 @@ p {
   }
 
   .hero-tagline {
-    height: 60px;
+    height: 60px; /* Ensure text fits */
   }
 
   .section-header {
@@ -908,7 +970,8 @@ p {
   .timeline-marker {
     width: 25px;
     height: 25px;
-    left: -30px;
+    /* Adjusting marker position for smaller screens if the -25px was problematic */
+    left: calc(12px - (25px / 2)); /* Center on the line at 12px */
   }
 
   .timeline {
@@ -920,10 +983,11 @@ p {
   }
 }
 
-/* Utility Classes */
+/* Utility Classes (No changes needed here for theme) */
 .text-center {
   text-align: center;
 }
+/* ... other utility classes ... */
 
 .mb-1 {
   margin-bottom: 0.25rem;

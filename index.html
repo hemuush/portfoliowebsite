@@ -26,9 +26,8 @@
 
   <header id="hero" class="animate__animated animate__fadeIn">
     <div class="hero-content">
-      <h1>Hemant Sharma</h1>
-      <h2>Analyst</h2> <div class="hero-tagline">
-        <span class="typing-text"></span><span class="cursor">|</span>
+      <h1 id="hero-name"></h1> <h2 id="hero-title"></h2> <div class="hero-tagline">
+        <span id="typing-text" class="typing-text"></span><span class="cursor">|</span>
       </div>
       <nav id="menu">
         <a data-section="about" class="menu-item"><i class="fas fa-user"></i> About</a>
@@ -52,16 +51,11 @@
           <div class="about-image">
             <div class="img-placeholder">
               <i class="fas fa-user-circle"></i>
-            </div>
+              </div>
           </div>
-          <div class="about-text">
-            <p>Hemant Sharma is a skilled Python Developer with 2.8 years of experience in backend development, API creation, and machine learning integration. Skilled in Agile methodologies, Django, and OpenAI integration, deploying solutions in cloud and on-premises environments.</p>
-            <p>His role at KPMG covers multiple service lines, including Tax, HR, and Forensic.</p> <div class="about-stats">
-              <div class="stat">
-                <span class="stat-number">2.8+</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              </div>
+          <div class="about-text" id="about-text">
+            <div class="about-stats" id="about-stats">
+                </div>
           </div>
         </div>
       </div>
@@ -73,64 +67,8 @@
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="skills-wrapper">
-          <div class="skill-category">
-            <h3><i class="fas fa-code"></i> Programming Languages</h3>
-            <ul class="skill-list">
-              <li class="skill-pill">Python</li>
-              <li class="skill-pill">JavaScript</li>
-              <li class="skill-pill">HTML</li>
-              <li class="skill-pill">CSS</li>
-              <li class="skill-pill">Pandas</li>
-              <li class="skill-pill">Numpy</li>
-              <li class="skill-pill">Matplotlib</li>
-              <li class="skill-pill">PyTorch</li>
-              <li class="skill-pill">OpenCV</li>
-            </ul>
+        <div class="skills-wrapper" id="skills-wrapper">
           </div>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-server"></i> Backend & Frameworks</h3>
-            <ul class="skill-list">
-              <li class="skill-pill">Django</li>
-              <li class="skill-pill">Flask</li>
-              <li class="skill-pill">FastAPI</li>
-              <li class="skill-pill">RESTful APIs</li> </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-database"></i> Databases</h3>
-            <ul class="skill-list">
-              <li class="skill-pill">MongoDB</li>
-              <li class="skill-pill">MySQL</li>
-              <li class="skill-pill">MS SQL</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-            <ul class="skill-list">
-              <li class="skill-pill">Scikit-learn</li>
-              <li class="skill-pill">PyTorch</li>
-              <li class="skill-pill">OpenCV</li>
-              <li class="skill-pill">OpenAI Integration</li>
-              <li class="skill-pill">NLP</li> </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-            <ul class="skill-list">
-              <li class="skill-pill">Azure</li> <li class="skill-pill">OpenAI (Azure)</li> <li class="skill-pill">AI Search (Azure)</li>
-              <li class="skill-pill">API Management (Azure)</li>
-              <li class="skill-pill">App Services (Azure)</li>
-              <li class="skill-pill">Azure Fundamentals</li>
-              <li class="skill-pill">Redis Cache (Azure)</li>
-              <li class="skill-pill">Git</li>
-              <li class="skill-pill">TFS</li>
-              <li class="skill-pill">Azure DevOps</li>
-            </ul>
-          </div>
-           </div>
       </div>
     </section>
 
@@ -140,42 +78,8 @@
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-header">
-              <h3>KBOT-AI (AI-Assistant Tool)</h3> <div class="project-tags">
-                <span>Python</span>
-                <span>Azure OpenAI</span>
-                <span>.NET</span>
-                <span>Microsoft Teams</span> </div>
-            </div>
-            <p>The AI chatbot assistant, developed using Azure OpenAI and various technologies, enhances user interactions by providing friendly responses to HR inquiries from policies, leave applications and holiday information. Integrates with Microsoft Teams for easy access, utilizing advanced AI to deliver accurate responses. This tool helps companies streamline HR processes and improve employee experience.</p> <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a> <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a> </div>
+        <div class="projects-grid" id="projects-grid">
           </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>KPMG Integrated GST Suite</h3> <div class="project-tags">
-                <span>Python</span>
-                <span>Azure</span>
-                <span>.NET</span>
-              </div>
-            </div>
-            <p>A tool that streamlines the filing of GST returns, e-invoices, and e-way bills for businesses. Contributed to the GSTR-1 and GSTR-2 modules by developing data validation and reconciliation processes. Deployed on Azure using Containers and Function Apps, the project automates file processing with Python and features a .NET front end, significantly reducing the time and effort required for GST compliance.</p> <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a> <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a> </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>Resume Parsing</h3> <div class="project-tags">
-                <span>Machine Learning</span>
-                <span>AI</span>
-                <span>Python</span> </div>
-            </div>
-            <p>Assists recruiters in efficiently evaluating job applicants by leveraging machine learning and AI to compare resumes with job descriptions, calculating match percentages based on a weighted matrix. This systematic approach organizes resumes and ensures accuracy, saving time and allowing hiring managers to focus on the most qualified candidates.</p> <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a> <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a> </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -185,61 +89,18 @@
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-date">01/2022 - Present</div> <h3>Analyst</h3> <h4>KPMG India</h4>
-              <ul class="experience-list">
-                <li>Working on real time Machine Learning and Software Development project, related to TAX and Forensic.</li> <li>Along with that also get know the knowledge of azure cloud fundamentals and Devoops.</li> </ul>
-            </div>
-          </div>
-
+        <div class="timeline" id="experience-timeline">
           </div>
       </div>
     </section>
 
     <section id="education" class="section-container">
       <div class="section-header">
-        <h2>Education & Certifications</h2> <span class="close-btn"><i class="fas fa-times"></i></span>
+        <h2>Education & Certifications</h2>
+        <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <i class="fas fa-university"></i>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-date"></div> <h3>Bachelor of Technology, Computer Science</h3>
-              <h4>Punjabi University</h4> </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-date"></div> <h3>Machine Learning from Stanford (Coursera)</h3> <p></p> </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="timeline-content">
-               <div class="timeline-date"></div> <h3>Python (Basic), SQL (Basic), 5 star in Python (HackerRank)</h3> <p></p> </div>
-          </div>
-
-           <div class="timeline-item">
-            <div class="timeline-marker">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="timeline-content">
-               <div class="timeline-date"></div> <h3>Python for Everybody (Coursera)</h3> <p></p> </div>
-          </div>
-
+        <div class="timeline" id="education-timeline">
           </div>
       </div>
     </section>
@@ -251,28 +112,8 @@
       </div>
       <div class="section-content">
         <div class="contact-grid">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h3>Email</h3>
-                <p>hemant.shar.3004@gmail.com</p> </div>
+          <div class="contact-info" id="contact-info">
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h3>Phone</h3>
-                <p>8968104968</p> </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h3>Location</h3>
-                <p>Noida</p> </div>
-            </div>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/hemuush/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a> <a href="https://github.com/hemuush" class="social-link" target="_blank"><i class="fab fa-github"></i></a> </div>
-          </div>
           <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
@@ -297,12 +138,12 @@
 
   <footer id="footer">
     <div class="footer-content">
-      <p>© 2025 Hemant Sharma | Crafted with <i class="fas fa-heart"></i> and code</p> <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
+      <p><span id="footer-copyright"></span> | Crafted with <i class="fas fa-heart"></i> and code</p>
+      <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
     </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="main.js"></script>
-</body>
+  <script src="portfoliodata.js"></script> <script src="main.js"></script> </body>
 </html>

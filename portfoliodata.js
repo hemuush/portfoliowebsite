@@ -14,12 +14,11 @@ const portfolioData = {
     },
     about: {
         description: [
-            "Hemant Sharma is a skilled Python Developer with 2.8 years of experience in backend development, API creation, and machine learning integration. Skilled in Agile methodologies, Django, and OpenAI integration, deploying solutions in cloud and on-premises environments.",
-            "His role at KPMG covers multiple service lines, including Tax, HR, and Forensic."
+            "I am skilled Python Developer with 3.5 years of experience in backend development, API creation, and machine learning integration. Skilled in Agile methodologies, Django, and OpenAI integration, deploying solutions in cloud and on-premises environments.",
             // Add more paragraphs for your about section here
         ],
         stats: [
-            { number: "3.2+", label: "Years Experience" }
+            { number: "3.5+", label: "Years Experience" }
             // Add other stats if you like, e.g., { number: "XX+", label: "Completed Projects" }
         ]
         // You could also add an imageUrl here for the about photo if you don't use the icon
@@ -53,32 +52,39 @@ const portfolioData = {
             title: "KBOT-AI (AI-Assistant Tool)",
             tags: ["Python", "Azure OpenAI", ".NET", "Microsoft Teams"],
             description: "The AI chatbot assistant, developed using Azure OpenAI and various technologies, enhances user interactions by providing friendly responses to HR inquiries from policies, leave applications and holiday information. Integrates with Microsoft Teams for easy access, utilizing advanced AI to deliver accurate responses. This tool helps companies streamline HR processes and improve employee experience.",
-            demoLink: "#", // Replace # with your demo URL if available
-            codeLink: "#"  // Replace # with your code repository URL if available
+            // demoLink: "#", // Replace # with your demo URL if available
+            // codeLink: "#"  // Replace # with your code repository URL if available
         },
         {
             title: "KPMG Integrated GST Suite",
             tags: ["Python", "Azure", ".NET"],
             description: "A tool that streamlines the filing of GST returns, e-invoices, and e-way bills for businesses. Contributed to the GSTR-1 and GSTR-2 modules by developing data validation and reconciliation processes. Deployed on Azure using Containers and Function Apps, the project automates file processing with Python and features a .NET front end, significantly reducing the time and effort required for GST compliance.",
-            demoLink: "#", // Replace # with your demo URL if available
-            codeLink: "#"  // Replace # with your code repository URL if available
+
         },
         {
             title: "Resume Parsing",
             tags: ["Machine Learning", "AI", "Python"],
             description: "Assists recruiters in efficiently evaluating job applicants by leveraging machine learning and AI to compare resumes with job descriptions, calculating match percentages based on a weighted matrix. This systematic approach organizes resumes and ensures accuracy, saving time and allowing hiring managers to focus on the most qualified candidates.",
-            demoLink: "#", // Replace # with your demo URL if available
-            codeLink: "#"  // Replace # with your code repository URL if available
         }
         // Add more project objects here
     ],
     experience: [
         {
-            date: "01/2022 - Present",
+            date: "12/2024 - Present",
+            title: "Senior Executive",
+            company: "Walker Chandiok Co & LLP",
+            descriptionPoints: [
+                "Working on real time Machine Learning and Software Development project, related to TAX and Forensic.",
+                "Along with that also get know the knowledge of azure cloud fundamentals and Devoops."
+                // Add more bullet points for this job experience
+            ]
+        },
+        {
+            date: "01/2022 - 11/2024",
             title: "Analyst",
             company: "KPMG India",
             descriptionPoints: [
-                "Working on real time Machine Learning and Software Development project, related to TAX and Forensic.",
+                "Working on real time Machine Learning and Software Development project Related to Chatbots, Automation, GenAI.",
                 "Along with that also get know the knowledge of azure cloud fundamentals and Devoops."
                 // Add more bullet points for this job experience
             ]

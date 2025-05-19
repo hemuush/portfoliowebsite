@@ -1020,3 +1020,21 @@ p {
 .mt-4 {
   margin-top: 1rem;
 }
+
+.img-placeholder {
+  width: 200px; /* Adjust size as needed */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%; /* Circular image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional placeholder background */
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 50%;
+}

@@ -3,76 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemant Sharma | System Online</title>
+  <title>Hemant Sharma | Neural Interface</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="agent-interface">
+  <div class="split-layout">
     
-    <aside class="brain-panel">
-      <div class="brain-header">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <div class="active-dot"></div> SYSTEM_ROOT
+    <aside class="terminal-pane">
+      <div class="term-header">
+        <div class="traffic-lights">
+          <span class="light red"></span>
+          <span class="light yellow"></span>
+          <span class="light green"></span>
         </div>
-        <span>MEM: 64TB</span>
+        <div class="term-title">root@hemant_os:~</div>
       </div>
-      <div class="agent-logs" id="agent-logs">
+      
+      <div class="term-body" id="term-logs">
         </div>
+
+      <div class="term-input-area">
+        <span class="prompt">➜</span>
+        <span class="path">~</span>
+        <input type="text" id="cmd-input" placeholder="Type 'help' or click links..." autocomplete="off">
+      </div>
+
+      <div class="system-modules">
+        <button class="mod-btn" onclick="System.navigate('hero')">
+          <span class="status-indicator active"></span> CORE
+        </button>
+        <button class="mod-btn" onclick="System.navigate('projects')">
+          <span class="status-indicator"></span> DEPLOYMENTS
+        </button>
+        <button class="mod-btn" onclick="System.navigate('skills')">
+          <span class="status-indicator"></span> NEURAL_NET
+        </button>
+        <button class="mod-btn" onclick="System.navigate('experience')">
+          <span class="status-indicator"></span> HISTORY_LOGS
+        </button>
+        <button class="mod-btn" onclick="System.navigate('contact')">
+          <span class="status-indicator"></span> UPLINK
+        </button>
+      </div>
     </aside>
 
-    <main class="visual-canvas">
+    <main class="visual-pane" id="main-scroll">
       
-      <section id="hero" class="notebook-cell" data-tool="init_core">
-        <div class="quote-badge">"Hello, Friend."</div>
-        <div class="cell-label">// ENTRY_POINT</div>
-        <div class="hero-content">
-          <h1 class="hero-title">Hemant Sharma<span style="color:var(--accent-primary)">_</span></h1>
-          <div id="typing-text" class="typewriter"></div>
-        </div>
-      </section>
-
-      <section id="about" class="notebook-cell" data-tool="load_profile">
-        <div class="quote-badge">"Chaos is a ladder."</div>
-        <div class="cell-label">// WHOAMI</div>
-        <div class="about-grid grid-system">
-           <div id="about-content"></div>
-           <div id="about-stats" style="display:flex; flex-direction:column; gap:10px"></div>
-        </div>
-      </section>
-
-      <section id="skills" class="notebook-cell" data-tool="check_dependencies">
-        <div class="quote-badge">"Respect the chemistry."</div>
-        <div class="cell-label">// CAPABILITIES</div>
-        <div id="skills-grid" class="grid-system"></div>
-      </section>
-
-      <section id="projects" class="notebook-cell" data-tool="fetch_records">
-        <div class="quote-badge">"I am the one who builds."</div>
-        <div class="cell-label">// DEPLOYMENTS</div>
-        <div id="projects-grid" class="grid-system"></div>
-      </section>
-
-      <section id="contact" class="notebook-cell" data-tool="open_channel">
-        <div class="quote-badge">"The beginning is the end."</div>
-        <div class="cell-label">// SIGNAL</div>
-        <div class="chat-interface">
-          <div class="chat-window" id="chat-window">
-            <div class="msg sys-msg">> Connection established. Waiting for input...</div>
+      <div class="glass-header">
+        <div class="user-badge">
+          <div class="avatar-frame">
+            <img src="Hemant Sharma.jpg" alt="Profile">
           </div>
-          <form id="contactForm" class="input-area">
-            <input type="text" id="userMsg" placeholder="Execute message protocol..." required>
-            <button type="submit" class="send-btn">SEND</button>
-          </form>
+          <div class="user-meta">
+            <span class="name">Hemant Sharma</span>
+            <span class="role">AI Architect // Full Stack</span>
+          </div>
         </div>
-      </section>
+        <a href="#contact" class="cta-mini">Hire Agent <i class="fas fa-arrow-right"></i></a>
+      </div>
 
+      <div class="content-wrapper">
+        
+        <section id="hero" class="data-section">
+          <div class="section-label">01 // INITIALIZATION</div>
+          <h1 class="glitch-header" data-text="BUILDING INTELLIGENT SYSTEMS">BUILDING <br> INTELLIGENT SYSTEMS</h1>
+          <p class="bio-text">
+            I bridge the gap between <strong>complex backend logic</strong> and <strong>cognitive AI agents</strong>. 
+            Transforming raw data into actionable intelligence.
+          </p>
+          <div class="stat-row">
+            <div class="stat-chip">
+              <span class="val">3.5+</span>
+              <span class="lbl">YEARS EXP</span>
+            </div>
+            <div class="stat-chip">
+              <span class="val">10+</span>
+              <span class="lbl">MODELS DEPLOYED</span>
+            </div>
+            <div class="stat-chip">
+              <span class="val">100%</span>
+              <span class="lbl">SYSTEM UPTIME</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="data-section">
+          <div class="section-label">02 // ACTIVE DEPLOYMENTS</div>
+          <div class="grid-2" id="projects-container">
+            </div>
+        </section>
+
+        <section id="skills" class="data-section">
+          <div class="section-label">03 // NEURAL CAPABILITIES</div>
+          <div class="tech-stack-panel" id="skills-container">
+            </div>
+        </section>
+
+        <section id="experience" class="data-section">
+          <div class="section-label">04 // SYSTEM HISTORY</div>
+          <div class="timeline-feed" id="experience-container">
+            </div>
+        </section>
+
+        <section id="contact" class="data-section">
+          <div class="section-label">05 // ESTABLISH UPLINK</div>
+          <div class="contact-terminal">
+            <p style="color:#888; margin-bottom:1rem;">Ready to initiate handshake protocol?</p>
+            <form id="contact-form">
+              <div class="input-group">
+                <input type="text" placeholder="IDENTITY (Name)" required>
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="SIGNAL FREQUENCY (Email)" required>
+              </div>
+              <div class="input-group">
+                <textarea rows="3" placeholder="DATA PACKET (Message)" required></textarea>
+              </div>
+              <button type="submit" class="run-btn">
+                <i class="fas fa-terminal"></i> EXECUTE SEND()
+              </button>
+            </form>
+            <div class="social-row">
+              <a href="https://linkedin.com/in/hemuush" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="https://github.com/hemuush" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <p>SYSTEM STATUS: ONLINE // © 2025 HEMANT SHARMA</p>
+        </footer>
+
+      </div>
     </main>
+
   </div>
 
   <script src="portfoliodata.js"></script>

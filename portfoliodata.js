@@ -1,77 +1,58 @@
 const portfolioData = {
-    hero: {
-        name: "Hemant Sharma",
-        title: "AI Architect & Backend Lead",
-        taglinePhrases: [
-            "Initializing Neural Networks...",
-            "Deploying Autonomous Agents...",
-            "Fine-Tuning RAG Pipelines...",
-            "Hello, Friend." // Mr. Robot reference
-        ]
+    // SYSTEM QUOTES (TV Shows)
+    quotes: {
+        "boot": { text: "Hello, Friend. System initialized.", source: "Mr. Robot" },
+        "projects": { text: "I am the one who knocks.", source: "Breaking Bad" },
+        "experience": { text: "Chaos is a ladder.", source: "Game of Thrones" },
+        "skills": { text: "Go beyond! Plus Ultra!", source: "My Hero Academia" },
+        "contact": { text: "If you don't fight, you can't win.", source: "Attack on Titan" }
     },
-    system_protocols: [ // QUOTES DATABASE
-        { id: "MR_ROBOT_01", text: "Control is an illusion.", source: "Mr. Robot" },
-        { id: "GOT_LADDER", text: "Chaos isn't a pit. Chaos is a ladder.", source: "Game of Thrones" },
-        { id: "BB_Knock", text: "I am the one who knocks.", source: "Breaking Bad" },
-        { id: "AOT_FIGHT", text: "If you don't fight, you can't win.", source: "Attack on Titan" },
-        { id: "DARK_LOOP", text: "The beginning is the end and the end is the beginning.", source: "Dark" }
-    ],
-    about: {
-        description: [
-            "<strong>\"No more half measures.\"</strong> (Breaking Bad). I don't just write scripts; I build robust, scalable <strong>cognitive architectures</strong>.",
-            "From pure backend logic to <strong>Agentic AI</strong>, I engineer systems that think. I specialize in <strong>OpenAI</strong> integrations, <strong>Vector Search</strong>, and making LLMs do real work."
-        ],
-        stats: [
-            { number: "3.5+", label: "Years Exp" },
-            { number: "PROD", label: "Env Level" },
-            { number: "99.9%", label: "Uptime" }
-        ]
-    },
-    skills: {
-        "Core_Intelligence": [ "Python", "LangChain", "OpenAI API", "LlamaIndex", "FastAPI" ],
-        "Memory_Systems": [ "Pinecone", "Weaviate", "PostgreSQL", "Redis" ],
-        "Infrastructure": [ "Azure AI", "Docker", "Kubernetes", "CI/CD Pipelines" ]
-    },
+    // PROJECTS
     projects: [
         {
             title: "Autonomous HR Agent",
-            type: "Agentic Workflow",
-            tags: ["LangChain", "Tool Calling", "Azure"],
-            description: "An autonomous agent using <strong>Tool Calling</strong> to handle HR operations. <em>\"Science is magic that works.\"</em>",
+            status: "DEPLOYED",
+            desc: "A cognitive agent using Tool Calling to automate HR workflows. It executes tasks autonomously.",
+            tags: ["LangChain", "OpenAI", "Azure"]
+        },
+        {
+            title: "Integrated GST Suite",
+            status: "PROD",
+            desc: "High-precision financial tool for mass tax filing. 99.1% code purity.",
+            tags: ["Python", ".NET", "SQL"]
         },
         {
             title: "RAG Knowledge Engine",
-            type: "Knowledge Pipeline",
-            tags: ["Embeddings", "Vector DB", "Search"],
-            description: "Ingests thousands of documents for instant retrieval. <em>\"The past affects the future.\"</em> (Dark)",
+            status: "BETA",
+            desc: "Ingesting thousands of documents for instant semantic retrieval.",
+            tags: ["Vector DB", "Embeddings", "FastAPI"]
         },
         {
-            title: "Resume Parsing Bot",
-            type: "NLP System",
-            tags: ["Spacy", "Cosine Similarity", "Python"],
-            description: "Extracts entities and matches candidates with precision.",
+            title: "Resume Parser Bot",
+            status: "V1.0",
+            desc: "NLP pipeline to extract entities and match candidates with precision.",
+            tags: ["Spacy", "ML", "Python"]
         }
     ],
+    // EXPERIENCE
     experience: [
         {
-            date: "Present",
-            title: "Senior Executive",
-            company: "Walker Chandiok Co & LLP",
-            description: "Leading AI forensic tools. <em>\"Power is power.\"</em>"
+            role: "Senior Executive",
+            company: "Walker Chandiok & Co",
+            date: "2024 - Present",
+            desc: "Leading the realm of AI forensic tools. Securing the perimeter."
         },
         {
-            date: "2022-2024",
-            title: "Analyst",
+            role: "Analyst",
             company: "KPMG India",
-            description: "Built the Integrated GST Suite and Internal Chatbots."
+            date: "2022 - 2024",
+            desc: "The origin story. Built the GST suite and pioneered internal GenAI chatbots."
         }
     ],
-    contact: {
-        email: "hemant.shar.3004@gmail.com",
-        socialLinks: [
-            { icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/hemuush/" },
-            { icon: "fab fa-github", url: "https://github.com/hemuush" }
-        ],
-        footer: { name: "Hemant Sharma", year: "2025" }
+    // SKILLS
+    skills: {
+        "NEURAL_NETWORKS": ["OpenAI API", "LangChain", "LlamaIndex", "Vector DBs"],
+        "BACKEND_CORE": ["Python", "Django", "FastAPI", "Microservices"],
+        "INFRASTRUCTURE": ["Azure AI", "Docker", "Kubernetes", "CI/CD"]
     }
 };

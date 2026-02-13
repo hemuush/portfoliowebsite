@@ -1,110 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemant Sharma – Portfolio</title>
-
+  <title>Hemant Sharma | System Online</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Hemant<span class="dot">.</span></div>
-    <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle" class="theme-btn">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
-  </nav>
-
-  <header id="hero">
-    <div class="hero-container">
-      
-      <div class="doodle-note top-left">
-        <span class="handwriting">Hi, I'm Hemant</span>
-        <svg class="arrow-doodle" viewBox="0 0 100 100" width="50" height="50">
-           <path d="M10,10 Q50,50 90,90" fill="none" stroke="currentColor" stroke-width="2" />
-        </svg>
-      </div>
-
-      <h1 class="hero-title">
-        I blend my engineering roots with 
-        <span class="highlight-container">
-          machine learning
-          <svg class="marker-underline" viewBox="0 0 200 20" preserveAspectRatio="none">
-            <path d="M5,15 Q50,5 195,15" fill="none" stroke="currentColor" stroke-width="8" opacity="0.4" />
-          </svg>
-        </span>
-        to build systems that just...
-        <br>
-        <span class="highlight-container highlight-orange">
-          make sense
-          <svg class="marker-bg" viewBox="0 0 300 60" preserveAspectRatio="none">
-             <path d="M10,20 Q150,5 290,25 Q150,55 10,40 Z" fill="currentColor" />
-          </svg>
-        </span>
-        <span class="eyes">👀</span>
-      </h1>
-
-      <div class="doodle-note center-right">
-        <span class="handwriting">I recently worked on AI @ KPMG,<br>automating the boring stuff.</span>
-        <svg class="curved-line" width="60" height="40" viewBox="0 0 60 40">
-           <path d="M0,20 Q30,0 60,20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
-        </svg>
-      </div>
-
-      <div class="doodle-note bottom-center">
-        <span class="handwriting">Okay so... how do I do that?</span>
-        <i class="fas fa-arrow-down bounce"></i>
-      </div>
-
-      <div class="peeking-avatar">
-        <img src="Hemant Sharma.jpg" alt="Hemant" class="avatar-img">
-      </div>
-
-    </div>
-  </header>
-
-  <main id="content">
+  <div class="agent-interface">
     
-    <section id="work" class="section-pad">
-      <div class="section-header">
-        <h2 class="handwriting">Here's how I do it.</h2>
+    <aside class="brain-panel">
+      <div class="brain-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="active-dot"></div> SYSTEM_ROOT
+        </div>
+        <span>MEM: 64TB</span>
       </div>
-      <div id="projects-list" class="projects-container"></div>
-    </section>
+      <div class="agent-logs" id="agent-logs">
+        </div>
+    </aside>
 
-    <section id="about" class="section-pad bg-alternate">
-      <div class="section-header">
-        <h2 class="handwriting">My Journey & Tools</h2>
-      </div>
-      <div class="grid-2-col">
-        <div id="experience-list" class="experience-col"></div>
-        <div id="skills-grid" class="skills-col"></div>
-      </div>
-    </section>
+    <main class="visual-canvas">
+      
+      <section id="hero" class="notebook-cell" data-tool="init_core">
+        <div class="quote-badge">"Hello, Friend."</div>
+        <div class="cell-label">// ENTRY_POINT</div>
+        <div class="hero-content">
+          <h1 class="hero-title">Hemant Sharma<span style="color:var(--accent-primary)">_</span></h1>
+          <div id="typing-text" class="typewriter"></div>
+        </div>
+      </section>
 
-    <section id="contact" class="section-pad">
-      <div class="contact-box">
-        <h2 class="hero-title" style="font-size: 2.5rem;">Let's build something cool.</h2>
-        <div id="contact-info" class="contact-links"></div>
-      </div>
-    </section>
+      <section id="about" class="notebook-cell" data-tool="load_profile">
+        <div class="quote-badge">"Chaos is a ladder."</div>
+        <div class="cell-label">// WHOAMI</div>
+        <div class="about-grid grid-system">
+           <div id="about-content"></div>
+           <div id="about-stats" style="display:flex; flex-direction:column; gap:10px"></div>
+        </div>
+      </section>
 
-  </main>
+      <section id="skills" class="notebook-cell" data-tool="check_dependencies">
+        <div class="quote-badge">"Respect the chemistry."</div>
+        <div class="cell-label">// CAPABILITIES</div>
+        <div id="skills-grid" class="grid-system"></div>
+      </section>
 
-  <footer>
-    <p id="footer-copyright" class="handwriting"></p>
-  </footer>
+      <section id="projects" class="notebook-cell" data-tool="fetch_records">
+        <div class="quote-badge">"I am the one who builds."</div>
+        <div class="cell-label">// DEPLOYMENTS</div>
+        <div id="projects-grid" class="grid-system"></div>
+      </section>
+
+      <section id="contact" class="notebook-cell" data-tool="open_channel">
+        <div class="quote-badge">"The beginning is the end."</div>
+        <div class="cell-label">// SIGNAL</div>
+        <div class="chat-interface">
+          <div class="chat-window" id="chat-window">
+            <div class="msg sys-msg">> Connection established. Waiting for input...</div>
+          </div>
+          <form id="contactForm" class="input-area">
+            <input type="text" id="userMsg" placeholder="Execute message protocol..." required>
+            <button type="submit" class="send-btn">SEND</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
 
   <script src="portfoliodata.js"></script>
   <script src="main.js"></script>

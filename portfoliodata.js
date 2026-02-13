@@ -1,132 +1,77 @@
-
 const portfolioData = {
     hero: {
         name: "Hemant Sharma",
-        title: "Analyst", // Or your preferred title
+        title: "AI Architect & Backend Lead",
         taglinePhrases: [
-            'Building robust backend solutions',
-            'Creating AI-powered applications',
-            'Developing with Python & Django',
-            'Transforming ideas into code',
-            'Solving complex problems with ML'
-            // Add or change your typing phrases here
+            "Initializing Neural Networks...",
+            "Deploying Autonomous Agents...",
+            "Fine-Tuning RAG Pipelines...",
+            "Hello, Friend." // Mr. Robot reference
         ]
     },
+    system_protocols: [ // QUOTES DATABASE
+        { id: "MR_ROBOT_01", text: "Control is an illusion.", source: "Mr. Robot" },
+        { id: "GOT_LADDER", text: "Chaos isn't a pit. Chaos is a ladder.", source: "Game of Thrones" },
+        { id: "BB_Knock", text: "I am the one who knocks.", source: "Breaking Bad" },
+        { id: "AOT_FIGHT", text: "If you don't fight, you can't win.", source: "Attack on Titan" },
+        { id: "DARK_LOOP", text: "The beginning is the end and the end is the beginning.", source: "Dark" }
+    ],
     about: {
         description: [
-            "I am skilled Python Developer with 3.5 years of experience in backend development, API creation, and machine learning integration. Skilled in Agile methodologies, Django, and OpenAI integration, deploying solutions in cloud and on-premises environments.",
-            // Add more paragraphs for your about section here
+            "<strong>\"No more half measures.\"</strong> (Breaking Bad). I don't just write scripts; I build robust, scalable <strong>cognitive architectures</strong>.",
+            "From pure backend logic to <strong>Agentic AI</strong>, I engineer systems that think. I specialize in <strong>OpenAI</strong> integrations, <strong>Vector Search</strong>, and making LLMs do real work."
         ],
         stats: [
-            { number: "3.5+", label: "Years Experience" }
-            // Add other stats if you like, e.g., { number: "XX+", label: "Completed Projects" }
+            { number: "3.5+", label: "Years Exp" },
+            { number: "PROD", label: "Env Level" },
+            { number: "99.9%", label: "Uptime" }
         ]
-        // You could also add an imageUrl here for the about photo if you don't use the icon
-        // imageUrl: "path/to/your/photo.jpg"
     },
     skills: {
-        programmingLanguages: [
-            "Python", "JavaScript", "HTML", "CSS", "Pandas", "Numpy", "Matplotlib", "PyTorch", "OpenCV"
-            // Add/remove programming languages and libraries here
-        ],
-        backendFrameworks: [
-            "Django", "Flask", "FastAPI", "RESTful APIs"
-            // Add/remove backend frameworks and concepts here
-        ],
-        databases: [
-            "MongoDB", "MySQL", "MS SQL"
-            // Add/remove databases here
-        ],
-        machineLearning: [
-            "Scikit-learn", "PyTorch", "OpenCV", "OpenAI Integration", "NLP"
-            // Add/remove ML skills here
-        ],
-        cloudDevOps: [
-            "Azure", "OpenAI (Azure)", "AI Search (Azure)", "API Management (Azure)", "App Services (Azure)", "Azure Fundamentals", "Redis Cache (Azure)", "Git", "TFS", "Azure DevOps"
-            // Add/remove cloud and DevOps skills here
-        ]
-        // You can add more skill categories here if needed
+        "Core_Intelligence": [ "Python", "LangChain", "OpenAI API", "LlamaIndex", "FastAPI" ],
+        "Memory_Systems": [ "Pinecone", "Weaviate", "PostgreSQL", "Redis" ],
+        "Infrastructure": [ "Azure AI", "Docker", "Kubernetes", "CI/CD Pipelines" ]
     },
     projects: [
         {
-            title: "KBOT-AI (AI-Assistant Tool)",
-            tags: ["Python", "Azure OpenAI", ".NET", "Microsoft Teams"],
-            description: "The AI chatbot assistant, developed using Azure OpenAI and various technologies, enhances user interactions by providing friendly responses to HR inquiries from policies, leave applications and holiday information. Integrates with Microsoft Teams for easy access, utilizing advanced AI to deliver accurate responses. This tool helps companies streamline HR processes and improve employee experience.",
-            // demoLink: "#", // Replace # with your demo URL if available
-            // codeLink: "#"  // Replace # with your code repository URL if available
+            title: "Autonomous HR Agent",
+            type: "Agentic Workflow",
+            tags: ["LangChain", "Tool Calling", "Azure"],
+            description: "An autonomous agent using <strong>Tool Calling</strong> to handle HR operations. <em>\"Science is magic that works.\"</em>",
         },
         {
-            title: "KPMG Integrated GST Suite",
-            tags: ["Python", "Azure", ".NET"],
-            description: "A tool that streamlines the filing of GST returns, e-invoices, and e-way bills for businesses. Contributed to the GSTR-1 and GSTR-2 modules by developing data validation and reconciliation processes. Deployed on Azure using Containers and Function Apps, the project automates file processing with Python and features a .NET front end, significantly reducing the time and effort required for GST compliance.",
-
+            title: "RAG Knowledge Engine",
+            type: "Knowledge Pipeline",
+            tags: ["Embeddings", "Vector DB", "Search"],
+            description: "Ingests thousands of documents for instant retrieval. <em>\"The past affects the future.\"</em> (Dark)",
         },
         {
-            title: "Resume Parsing",
-            tags: ["Machine Learning", "AI", "Python"],
-            description: "Assists recruiters in efficiently evaluating job applicants by leveraging machine learning and AI to compare resumes with job descriptions, calculating match percentages based on a weighted matrix. This systematic approach organizes resumes and ensures accuracy, saving time and allowing hiring managers to focus on the most qualified candidates.",
+            title: "Resume Parsing Bot",
+            type: "NLP System",
+            tags: ["Spacy", "Cosine Similarity", "Python"],
+            description: "Extracts entities and matches candidates with precision.",
         }
-        // Add more project objects here
     ],
     experience: [
         {
-            date: "12/2024 - Present",
+            date: "Present",
             title: "Senior Executive",
             company: "Walker Chandiok Co & LLP",
-            descriptionPoints: [
-                "Working on real time Machine Learning and Software Development project, related to TAX and Forensic.",
-                "Along with that also get know the knowledge of azure cloud fundamentals and Devoops."
-                // Add more bullet points for this job experience
-            ]
+            description: "Leading AI forensic tools. <em>\"Power is power.\"</em>"
         },
         {
-            date: "01/2022 - 11/2024",
+            date: "2022-2024",
             title: "Analyst",
             company: "KPMG India",
-            descriptionPoints: [
-                "Working on real time Machine Learning and Software Development project Related to Chatbots, Automation, GenAI.",
-                "Along with that also get know the knowledge of azure cloud fundamentals and Devoops."
-                // Add more bullet points for this job experience
-            ]
+            description: "Built the Integrated GST Suite and Internal Chatbots."
         }
-        // Add more job experience objects here
-    ],
-    education: [
-        {
-            degree: "Bachelor of Technology, Computer Science",
-            institution: "Punjabi University",
-            date: "", // Add date if needed, e.g., "2016 - 2020"
-            description: "" // Add description if needed
-        }
-        // Add more education objects here
-    ],
-    certifications: [ // Listed separately for clarity, will be combined in timeline
-        {
-            title: "Machine Learning from Stanford (Coursera)",
-            date: "" // Add date if needed
-        },
-        {
-            title: "Python (Basic), SQL (Basic), 5 star in Python (HackerRank)",
-            date: "" // Add date if needed
-        },
-        {
-            title: "Python for Everybody (Coursera)",
-            date: "" // Add date if needed
-        }
-        // Add more certification objects here
     ],
     contact: {
-        email: "hemant.shar.3004@gmail.com", // Your email
-        phone: "8968104968", // Your phone number
-        location: "Noida", // Your location
+        email: "hemant.shar.3004@gmail.com",
         socialLinks: [
-            { iconClass: "fab fa-linkedin", url: "https://www.linkedin.com/in/hemuush/" }, // Your LinkedIn URL
-            { iconClass: "fab fa-github", url: "https://github.com/hemuush" } // Your GitHub URL
-            // Add more social links here, e.g., { iconClass: "fab fa-twitter", url: "your-twitter-url" }
-        ]
-    },
-    footer: {
-        name: "Hemant Sharma",
-        year: "2025" // Update the year as needed
+            { icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/hemuush/" },
+            { icon: "fab fa-github", url: "https://github.com/hemuush" }
+        ],
+        footer: { name: "Hemant Sharma", year: "2025" }
     }
 };

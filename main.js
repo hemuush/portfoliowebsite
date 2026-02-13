@@ -1,5 +1,3 @@
-// main.js
-
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function () {
     // Populate the portfolio content from the data file

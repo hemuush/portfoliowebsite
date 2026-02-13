@@ -8,11 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  
+  <script src="portfoliodata.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
+
+  <nav class="mobile-nav">
+    <div class="logo">ROOT@HEMANT_OS:~</div>
+    <button id="mobile-menu-toggle" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#hero" class="m-link">Core</a>
+      <a href="#projects" class="m-link">Deployments</a>
+      <a href="#skills" class="m-link">Neural_Net</a>
+      <a href="#experience" class="m-link">Logs</a>
+      <a href="#contact" class="m-link">Uplink</a>
+    </div>
+  </nav>
 
   <div class="split-layout">
     
@@ -26,29 +42,28 @@
         <div class="term-title">root@hemant_os:~</div>
       </div>
       
-      <div class="term-body" id="term-logs">
-        </div>
+      <div class="term-body" id="term-logs"></div>
 
       <div class="term-input-area">
         <span class="prompt">➜</span>
         <span class="path">~</span>
-        <input type="text" id="cmd-input" placeholder="Type 'help' or click links..." autocomplete="off">
+        <input type="text" id="cmd-input" placeholder="Type 'help'..." autocomplete="off">
       </div>
 
       <div class="system-modules">
-        <button class="mod-btn" onclick="System.navigate('hero')">
+        <button class="mod-btn" data-target="hero">
           <span class="status-indicator active"></span> CORE
         </button>
-        <button class="mod-btn" onclick="System.navigate('projects')">
+        <button class="mod-btn" data-target="projects">
           <span class="status-indicator"></span> DEPLOYMENTS
         </button>
-        <button class="mod-btn" onclick="System.navigate('skills')">
+        <button class="mod-btn" data-target="skills">
           <span class="status-indicator"></span> NEURAL_NET
         </button>
-        <button class="mod-btn" onclick="System.navigate('experience')">
+        <button class="mod-btn" data-target="experience">
           <span class="status-indicator"></span> HISTORY_LOGS
         </button>
-        <button class="mod-btn" onclick="System.navigate('contact')">
+        <button class="mod-btn" data-target="contact">
           <span class="status-indicator"></span> UPLINK
         </button>
       </div>
@@ -71,9 +86,9 @@
 
       <div class="content-wrapper">
         
-        <section id="hero" class="data-section">
+        <section id="hero" class="data-section active">
           <div class="section-label">01 // INITIALIZATION</div>
-          <h1 class="glitch-header" data-text="BUILDING INTELLIGENT SYSTEMS">BUILDING <br> INTELLIGENT SYSTEMS</h1>
+          <h1 class="glitch-header">BUILDING <br> INTELLIGENT SYSTEMS</h1>
           <p class="bio-text">
             I bridge the gap between <strong>complex backend logic</strong> and <strong>cognitive AI agents</strong>. 
             Transforming raw data into actionable intelligence.
@@ -96,20 +111,17 @@
 
         <section id="projects" class="data-section">
           <div class="section-label">02 // ACTIVE DEPLOYMENTS</div>
-          <div class="grid-2" id="projects-container">
-            </div>
+          <div class="grid-2" id="projects-container"></div>
         </section>
 
         <section id="skills" class="data-section">
           <div class="section-label">03 // NEURAL CAPABILITIES</div>
-          <div class="tech-stack-panel" id="skills-container">
-            </div>
+          <div class="tech-stack-panel" id="skills-container"></div>
         </section>
 
         <section id="experience" class="data-section">
           <div class="section-label">04 // SYSTEM HISTORY</div>
-          <div class="timeline-feed" id="experience-container">
-            </div>
+          <div class="timeline-feed" id="experience-container"></div>
         </section>
 
         <section id="contact" class="data-section">
@@ -138,15 +150,11 @@
         </section>
 
         <footer>
-          <p>SYSTEM STATUS: ONLINE // © 2025 HEMANT SHARMA</p>
+          <p>SYSTEM STATUS: ONLINE // © 2026 HEMANT SHARMA</p>
         </footer>
 
       </div>
     </main>
-
   </div>
-
-  <script src="portfoliodata.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>

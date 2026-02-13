@@ -3,38 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemant Sharma – Portfolio</title>
+  <title>Hemant Sharma – Cyber Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  
+  <div class="cyber-grid"></div>
   <div id="particles-js"></div>
 
   <div id="loading">
-    <div class="spinner">
-      <div class="double-bounce1"></div>
-      <div class="double-bounce2"></div>
+    <div class="loader-content">
+      <div class="scanner"></div>
+      <p class="loading-text">INITIALIZING SYSTEM...</p>
     </div>
-    <p class="loading-text">Loading Portfolio</p>
   </div>
 
-  <header id="hero" class="animate__animated animate__fadeIn">
+  <header id="hero">
     <div class="hero-content">
-      <h1 id="hero-name"></h1> <h2 id="hero-title"></h2> <div class="hero-tagline">
-        <span id="typing-text" class="typing-text"></span><span class="cursor">|</span>
+      <div class="glitch-wrapper">
+        <h1 id="hero-name" data-text=""></h1>
       </div>
+      <h2 id="hero-title"></h2> 
+      <div class="hero-tagline">
+        <span class="bracket">[</span>
+        <span id="typing-text" class="typing-text"></span>
+        <span class="cursor">_</span>
+        <span class="bracket">]</span>
+      </div>
+      
       <nav id="menu">
-        <a data-section="about" class="menu-item"><i class="fas fa-user"></i> About</a>
-        <a data-section="skills" class="menu-item"><i class="fas fa-code"></i> Skills</a>
-        <a data-section="projects" class="menu-item"><i class="fas fa-laptop-code"></i> Projects</a>
-        <a data-section="experience" class="menu-item"><i class="fas fa-briefcase"></i> Experience</a>
-        <a data-section="education" class="menu-item"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a data-section="contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
+        <a data-section="about" class="menu-item"><i class="fas fa-user"></i> ABOUT</a>
+        <a data-section="skills" class="menu-item"><i class="fas fa-code"></i> SKILLS</a>
+        <a data-section="projects" class="menu-item"><i class="fas fa-laptop-code"></i> PROJECTS</a>
+        <a data-section="experience" class="menu-item"><i class="fas fa-briefcase"></i> EXP</a>
+        <a data-section="contact" class="menu-item"><i class="fas fa-envelope"></i> CONTACT</a>
       </nav>
     </div>
   </header>
@@ -42,19 +50,18 @@
   <main id="content">
     <section id="about" class="section-container">
       <div class="section-header">
-        <h2>About Me</h2>
+        <h2>// ABOUT_ME</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
         <div class="about-grid">
           <div class="about-image">
-            <div class="img-placeholder">
+            <div class="img-frame">
               <img src="Hemant Sharma.jpg" alt="Hemant Sharma" class="profile-image">
-              </div>
+            </div>
           </div>
           <div class="about-text" id="about-text">
-            <div class="about-stats" id="about-stats">
-                </div>
+            <div class="about-stats" id="about-stats"></div>
           </div>
         </div>
       </div>
@@ -62,72 +69,67 @@
 
     <section id="skills" class="section-container">
       <div class="section-header">
-        <h2>Skills & Expertise</h2>
+        <h2>// SKILLS_DB</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="skills-wrapper" id="skills-wrapper">
-          </div>
+        <div class="skills-wrapper" id="skills-wrapper"></div>
       </div>
     </section>
 
     <section id="projects" class="section-container">
       <div class="section-header">
-        <h2>Projects</h2>
+        <h2>// PROJECT_LOGS</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="projects-grid" id="projects-grid">
-          </div>
+        <div class="projects-grid" id="projects-grid"></div>
       </div>
     </section>
 
     <section id="experience" class="section-container">
       <div class="section-header">
-        <h2>Work Experience</h2>
+        <h2>// WORK_HISTORY</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="timeline" id="experience-timeline">
-          </div>
+        <div class="timeline" id="experience-timeline"></div>
       </div>
     </section>
 
     <section id="education" class="section-container">
       <div class="section-header">
-        <h2>Education & Certifications</h2>
+        <h2>// EDUCATION_CERT</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
-        <div class="timeline" id="education-timeline">
-          </div>
+        <div class="timeline" id="education-timeline"></div>
       </div>
     </section>
 
     <section id="contact" class="section-container">
       <div class="section-header">
-        <h2>Contact Me</h2>
+        <h2>// TRANSMISSION</h2>
         <span class="close-btn"><i class="fas fa-times"></i></span>
       </div>
       <div class="section-content">
         <div class="contact-grid">
-          <div class="contact-info" id="contact-info">
-            </div>
+          <div class="contact-info" id="contact-info"></div>
           <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">ID / NAME</label>
                 <input type="text" id="name" name="name" required>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">CONTACT_FREQ (EMAIL)</label>
                 <input type="email" id="email" name="email" required>
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message">DATA_PACKET (MESSAGE)</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
               </div>
-              <button type="submit" class="submit-btn">Send Message</button>
+              <button type="submit" class="submit-btn">SEND_DATA</button>
             </form>
           </div>
         </div>
@@ -138,11 +140,12 @@
   <footer id="footer">
     <div class="footer-content">
       <p><span id="footer-copyright"></span></p>
-      <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
     </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="portfoliodata.js"></script> <script src="main.js"></script> </body>
+  <script src="portfoliodata.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>

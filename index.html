@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hemant Sharma - AI Architect & Full Stack Developer Portfolio">
   <title>Hemant Sharma | Neural Interface</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
   <link rel="stylesheet" href="styles.css" />
   
   <script src="portfoliodata.js" defer></script>
@@ -16,75 +18,88 @@
 </head>
 <body>
 
+  <div class="ambient-glow"></div>
+
   <nav class="mobile-nav">
     <div class="logo">ROOT@HEMANT_OS:~</div>
     <button id="mobile-menu-toggle" aria-label="Toggle Menu">
       <i class="fas fa-bars"></i>
     </button>
-    <div class="mobile-menu" id="mobile-menu">
+  </nav>
+
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-links">
       <a href="#hero" class="m-link">Core</a>
       <a href="#projects" class="m-link">Deployments</a>
       <a href="#skills" class="m-link">Neural_Net</a>
       <a href="#experience" class="m-link">Logs</a>
       <a href="#contact" class="m-link">Uplink</a>
     </div>
-  </nav>
+  </div>
 
-  <div class="split-layout">
+  <div class="app-grid">
     
-    <aside class="terminal-pane">
-      <div class="term-header">
-        <div class="traffic-lights">
-          <span class="light red"></span>
-          <span class="light yellow"></span>
-          <span class="light green"></span>
+    <aside class="sidebar-pane">
+      <div class="terminal-window">
+        <div class="term-header">
+          <div class="traffic-lights">
+            <span class="light red"></span>
+            <span class="light yellow"></span>
+            <span class="light green"></span>
+          </div>
+          <div class="term-title">root@hemant_os:~</div>
         </div>
-        <div class="term-title">root@hemant_os:~</div>
-      </div>
-      
-      <div class="term-body" id="term-logs"></div>
+        
+        <div class="term-body" id="term-logs">
+          </div>
 
-      <div class="term-input-area">
-        <span class="prompt">➜</span>
-        <span class="path">~</span>
-        <input type="text" id="cmd-input" placeholder="Type 'help'..." autocomplete="off">
+        <div class="term-input-area">
+          <span class="prompt">➜</span>
+          <span class="path">~</span>
+          <input type="text" id="cmd-input" placeholder="Type 'help'..." autocomplete="off">
+        </div>
       </div>
 
-      <div class="system-modules">
+      <nav class="system-modules">
         <button class="mod-btn" data-target="hero">
-          <span class="status-indicator active"></span> CORE
+          <i class="fas fa-microchip"></i> <span>CORE</span>
+          <span class="status-dot"></span>
         </button>
         <button class="mod-btn" data-target="projects">
-          <span class="status-indicator"></span> DEPLOYMENTS
+          <i class="fas fa-rocket"></i> <span>DEPLOYMENTS</span>
+          <span class="status-dot"></span>
         </button>
         <button class="mod-btn" data-target="skills">
-          <span class="status-indicator"></span> NEURAL_NET
+          <i class="fas fa-network-wired"></i> <span>NEURAL_NET</span>
+          <span class="status-dot"></span>
         </button>
         <button class="mod-btn" data-target="experience">
-          <span class="status-indicator"></span> HISTORY_LOGS
+          <i class="fas fa-history"></i> <span>LOGS</span>
+          <span class="status-dot"></span>
         </button>
         <button class="mod-btn" data-target="contact">
-          <span class="status-indicator"></span> UPLINK
+          <i class="fas fa-satellite-dish"></i> <span>UPLINK</span>
+          <span class="status-dot"></span>
         </button>
-      </div>
+      </nav>
     </aside>
 
-    <main class="visual-pane" id="main-scroll">
+    <main class="content-pane">
       
-      <div class="glass-header">
+      <header class="glass-header">
         <div class="user-badge">
           <div class="avatar-frame">
-            <img src="Hemant Sharma.jpg" alt="Profile">
+            <img src="Hemant Sharma.jpg" alt="Profile" loading="lazy">
           </div>
           <div class="user-meta">
             <span class="name">Hemant Sharma</span>
             <span class="role">AI Architect // Full Stack</span>
           </div>
         </div>
-        <a href="#contact" class="cta-mini">Hire Agent <i class="fas fa-arrow-right"></i></a>
-      </div>
+        <a href="#contact" class="cta-mini">Contact <i class="fas fa-arrow-right"></i></a>
+      </header>
 
-      <div class="content-wrapper">
+      <div class="scroll-container">
         
         <section id="hero" class="data-section active">
           <div class="section-label">01 // INITIALIZATION</div>
@@ -93,41 +108,44 @@
             I bridge the gap between <strong>complex backend logic</strong> and <strong>cognitive AI agents</strong>. 
             Transforming raw data into actionable intelligence.
           </p>
-          <div class="stat-row">
-            <div class="stat-chip">
+          <div class="stat-grid">
+            <div class="stat-card">
               <span class="val">3.5+</span>
               <span class="lbl">YEARS EXP</span>
             </div>
-            <div class="stat-chip">
+            <div class="stat-card">
               <span class="val">10+</span>
-              <span class="lbl">MODELS DEPLOYED</span>
+              <span class="lbl">MODELS</span>
             </div>
-            <div class="stat-chip">
+            <div class="stat-card">
               <span class="val">100%</span>
-              <span class="lbl">SYSTEM UPTIME</span>
+              <span class="lbl">UPTIME</span>
             </div>
           </div>
         </section>
 
         <section id="projects" class="data-section">
           <div class="section-label">02 // ACTIVE DEPLOYMENTS</div>
-          <div class="grid-2" id="projects-container"></div>
+          <div class="bento-grid" id="projects-container">
+            </div>
         </section>
 
         <section id="skills" class="data-section">
           <div class="section-label">03 // NEURAL CAPABILITIES</div>
-          <div class="tech-stack-panel" id="skills-container"></div>
+          <div class="skills-grid" id="skills-container">
+            </div>
         </section>
 
         <section id="experience" class="data-section">
           <div class="section-label">04 // SYSTEM HISTORY</div>
-          <div class="timeline-feed" id="experience-container"></div>
+          <div class="timeline-feed" id="experience-container">
+            </div>
         </section>
 
         <section id="contact" class="data-section">
           <div class="section-label">05 // ESTABLISH UPLINK</div>
           <div class="contact-terminal">
-            <p style="color:#888; margin-bottom:1rem;">Ready to initiate handshake protocol?</p>
+            <p class="term-msg">Ready to initiate handshake protocol?</p>
             <form id="contact-form">
               <div class="input-group">
                 <input type="text" placeholder="IDENTITY (Name)" required>

@@ -1,4 +1,4 @@
-export const portfolioData = {
+const portfolioData = {
     quotes: [
         { text: "Hello, Friend. System initialized.", source: "Mr. Robot" },
         { text: "I am the one who knocks.", source: "Breaking Bad" },

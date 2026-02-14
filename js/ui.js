@@ -1,4 +1,4 @@
-export function renderQuotes(quotes) {
+function renderQuotes(quotes) {
     const display = document.getElementById('quote-display');
     let index = 0;
 
@@ -16,7 +16,7 @@ export function renderQuotes(quotes) {
     setInterval(typeQuote, 6000); 
 }
 
-export function renderProjects(projects) {
+function renderProjects(projects) {
     const container = document.getElementById('projects-container');
     if(!container) return;
     
@@ -34,7 +34,7 @@ export function renderProjects(projects) {
     `).join('');
 }
 
-export function renderSkills(skills) {
+function renderSkills(skills) {
     const container = document.getElementById('skills-container');
     if(!container) return;
 
@@ -48,7 +48,7 @@ export function renderSkills(skills) {
     `).join('');
 }
 
-export function renderExperience(experience) {
+function renderExperience(experience) {
     const container = document.getElementById('exp-container');
     if(!container) return;
 

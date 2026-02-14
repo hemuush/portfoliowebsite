@@ -1,10 +1,12 @@
-import { portfolioData } from './data.js';
-import { renderQuotes, renderProjects, renderSkills, renderExperience } from './ui.js';
+// NOTE: portfolioData and render functions are loaded globally from previous scripts
 
 const System = {
     init() {
         this.runBootSequence();
-        lucide.createIcons();
+        // Check if lucide icons are loaded
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     },
 
     async runBootSequence() {
@@ -34,10 +36,15 @@ const System = {
     },
 
     renderDashboard() {
-        renderQuotes(portfolioData.quotes);
-        renderProjects(portfolioData.projects);
-        renderSkills(portfolioData.skills);
-        renderExperience(portfolioData.experience);
+        // Data and functions are now available in global scope
+        if (typeof portfolioData !== 'undefined') {
+            renderQuotes(portfolioData.quotes);
+            renderProjects(portfolioData.projects);
+            renderSkills(portfolioData.skills);
+            renderExperience(portfolioData.experience);
+        } else {
+            console.error("Portfolio Data not loaded");
+        }
     }
 };
 

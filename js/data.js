@@ -10,7 +10,7 @@ const PortfolioData = {
             "GenAI · Azure · Python · MCP.",
             "Let's connect →"
         ],
-        imageUrl: "Hemant Sharma.jpg",
+        imageUrl: "assets/HemantSharma.jpg",
         imageAlt: "Hemant Sharma",
         badgeStatus: "ONLINE"
     },

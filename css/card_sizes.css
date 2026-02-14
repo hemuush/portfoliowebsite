@@ -1,0 +1,21 @@
+/* css/card-sizes.css */
+
+:root {
+    /* --- TOTAL DASHBOARD SIZE --- */
+    --dashboard-width: 95vw;  /* 95% of screen width */
+    --dashboard-height: 90vh; /* 90% of screen height (Fits in one page!) */
+    
+    /* --- HEIGHT CONTROL (Using % of the screen) --- */
+    /* These three numbers define how tall the cards on the RIGHT side are */
+    
+    /* 1. System Logs Height (Top Right) */
+    --h-logs: 20vh;   /* Takes 20% of the screen height */
+    
+    /* 2. Stats & Trajectory Height (Middle Right) */
+    --h-middle: 25vh; /* Takes 25% of the screen height */
+    
+    /* 3. Bottom Cards Height (Skills, Projects, Contact) */
+    --h-bottom: 35vh; /* Takes 35% of the screen height */
+    
+    /* Note: 20 + 25 + 35 = 80vh. The remaining ~10vh is for gaps/margins */
+}

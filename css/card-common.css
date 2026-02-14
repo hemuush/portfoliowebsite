@@ -1,0 +1,86 @@
+/**
+ * Shared card and boot sequence styles.
+ * Used by all bento cells.
+ */
+
+.cell {
+    border-radius: var(--card-radius, 16px);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+body.theme-light .cell {
+    box-shadow: var(--card-shadow, none);
+}
+
+body.theme-light .cell:hover {
+    box-shadow: var(--card-shadow-hover, none);
+}
+
+.glass-pane {
+    height: 100%;
+    width: 100%;
+    padding: var(--card-padding, 15px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* --- Boot sequence --- */
+#boot-sequence {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 14px;
+    transition: opacity 0.5s ease;
+}
+
+.terminal-window {
+    width: 100%;
+    max-width: 600px;
+}
+
+.terminal-text {
+    line-height: 1.6;
+}
+
+.terminal-text div {
+    margin-bottom: 2px;
+}
+
+.cell-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.cell-header i {
+    width: 18px;
+    height: 18px;
+}
+
+.cell-header span {
+    letter-spacing: 0.5px;
+}

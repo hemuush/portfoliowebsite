@@ -1,0 +1,55 @@
+/**
+ * Design tokens – single source of truth for layout, colors, and typography.
+ * Edit this file to customize the whole app.
+ */
+
+:root {
+    /* --- LAYOUT: Dashboard --- */
+    --dashboard-width: 95vw;
+    --dashboard-height: 90vh;
+
+    /* --- LAYOUT: Grid row heights --- */
+    --h-logs: 20vh;
+    --h-middle: 25vh;
+    --h-bottom: 35vh;
+    --h-contact-min: 100px;   /* Min height for Contact when stacked under Trajectory */
+
+    /* --- COLORS --- */
+    --bg-dark: #050505;
+    --bg-card: rgba(20, 20, 23, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+
+    --primary: #00f0ff;
+    --secondary: #7000ff;
+    --accent: #00ff9d;
+
+    --text-main: #ffffff;
+    --text-muted: #8892b0;
+
+    /* --- TYPOGRAPHY --- */
+    --font-heading: 'Space Mono', monospace;
+    --font-body: 'Outfit', sans-serif;
+
+    /* --- SPACING (optional overrides) --- */
+    --card-padding: 15px;
+    --grid-gap: 15px;
+    --card-radius: 16px;
+}
+
+/* --- LIGHT THEME --- */
+body.theme-light {
+    --bg-dark: #e8ecf1;
+    --bg-card: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
+
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --accent: #059669;
+
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --btn-icon-on-primary: #fff;
+
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

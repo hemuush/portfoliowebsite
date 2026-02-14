@@ -1,0 +1,125 @@
+/**
+ * Hero card – profile, name, role, bio.
+ */
+
+.cell-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    object-fit: cover;
+    display: block;
+}
+
+.glitch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent 65%, var(--primary) 100%);
+    opacity: 0.5;
+}
+
+.cell-hero h1.glitch-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.cell-hero .role-text {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.cell-hero .hero-bio {
+    color: var(--text-muted);
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.badge-status {
+    position: absolute;
+    top: max(12px, env(safe-area-inset-top));
+    right: max(12px, env(safe-area-inset-right));
+    background: rgba(0, 255, 157, 0.15);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body.theme-light .badge-status {
+    background: rgba(5, 150, 105, 0.12);
+    color: var(--accent);
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--accent);
+    animation: blink 2s infinite;
+}
+
+@media (max-width: 767px) {
+    .cell-hero .hero-content {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile-img-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+    }
+
+    .cell-hero h1.glitch-text {
+        font-size: 1.4rem;
+    }
+
+    .cell-hero .role-text {
+        font-size: 0.9rem;
+    }
+
+    .cell-hero .hero-bio {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .cell-hero .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img-wrapper {
+        margin-bottom: 12px;
+    }
+}

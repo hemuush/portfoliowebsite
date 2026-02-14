@@ -1,0 +1,17 @@
+/**
+ * System logs / quote rotation card.
+ */
+
+#quote-display {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    border-left: 2px solid var(--secondary);
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#quote-display > div {
+    width: 100%;
+}

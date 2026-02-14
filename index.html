@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#050505" id="meta-theme-color">
     <title>HS // AI_ARCHITECT_V2</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,21 +12,46 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Design tokens (edit this to customize the app) -->
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/card-common.css">
+    <!-- Card modules -->
+    <link rel="stylesheet" href="css/card-hero.css">
+    <link rel="stylesheet" href="css/card-logs.css">
+    <link rel="stylesheet" href="css/card-stats.css">
+    <link rel="stylesheet" href="css/card-trajectory.css">
+    <link rel="stylesheet" href="css/card-skills.css">
+    <link rel="stylesheet" href="css/card-projects.css">
+    <link rel="stylesheet" href="css/card-contact.css">
 
     <script src="js/data.js" defer></script>
     <script src="js/ui.js" defer></script>
     <script src="js/app.js" defer></script>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <link rel="stylesheet" href="css/card-sizes.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body class="theme-dark">
+    <script>
+        (function () {
+            var t = localStorage.getItem("portfolio-theme");
+            var meta = document.getElementById("meta-theme-color");
+            if (t === "light") {
+                document.body.classList.replace("theme-dark", "theme-light");
+                if (meta) meta.content = "#e8ecf1";
+            } else if (meta) {
+                meta.content = "#050505";
+            }
+        })();
+    </script>
+
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <i data-lucide="sun" class="icon-dark"></i>
+        <i data-lucide="moon" class="icon-light"></i>
+    </button>
 
     <div id="boot-sequence">
         <div class="terminal-window">
@@ -36,7 +62,6 @@
     <div class="cyber-grid"></div>
 
     <main class="bento-grid">
-
         <div class="cell cell-hero">
             <div class="glass-pane">
                 <div class="badge-status"><span class="pulse"></span> ONLINE</div>
@@ -62,18 +87,42 @@
             </div>
         </div>
 
-        <div class="cell cell-exp">
-            <div class="glass-pane">
-                <div class="cell-header"><i data-lucide="briefcase"></i><span>TRAJECTORY</span></div>
-                <div class="exp-list" id="exp-container"></div>
+        <div class="cell-stack cell-stack-right">
+            <div class="cell cell-exp">
+                <div class="glass-pane">
+                    <div class="cell-header"><i data-lucide="briefcase"></i><span>TRAJECTORY</span></div>
+                    <div class="exp-list" id="exp-container"></div>
+                </div>
+            </div>
+            <div class="cell cell-contact">
+                <div class="glass-pane">
+                    <div class="social-links">
+                        <a href="https://github.com/hemuush" target="_blank" class="social-btn github"><i
+                                data-lucide="github"></i></a>
+                        <a href="https://linkedin.com/in/hemuush" target="_blank" class="social-btn linkedin"><i
+                                data-lucide="linkedin"></i></a>
+                        <a href="mailto:your.email@example.com" class="social-btn mail"><i data-lucide="mail"></i></a>
+                    </div>
+                    <div class="location"><i data-lucide="map-pin"></i> NOIDA, IN</div>
+                </div>
             </div>
         </div>
 
         <div class="cell cell-stats">
             <div class="glass-pane">
-                <div class="stat-item"><span class="stat-val">3.5+</span><span class="stat-label">YRS EXP</span></div>
-                <div class="stat-item"><span class="stat-val">10+</span><span class="stat-label">PROJECTS</span></div>
-                <div class="stat-item"><span class="stat-val">MCP</span><span class="stat-label">FRAMEWORK</span></div>
+                <div class="cell-header"><i data-lucide="bar-chart-2"></i><span>METRICS</span></div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i data-lucide="calendar"></i>
+                        <span class="stat-val">3.5+</span>
+                        <span class="stat-label">YRS EXP</span>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="folder-git-2"></i>
+                        <span class="stat-val">10+</span>
+                        <span class="stat-label">PROJECTS</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -90,20 +139,6 @@
                 <div class="projects-scroll" id="projects-container"></div>
             </div>
         </div>
-
-        <div class="cell cell-contact">
-            <div class="glass-pane">
-                <div class="social-links">
-                    <a href="https://github.com/hemuush" target="_blank" class="social-btn github"><i
-                            data-lucide="github"></i></a>
-                    <a href="https://linkedin.com/in/hemuush" target="_blank" class="social-btn linkedin"><i
-                            data-lucide="linkedin"></i></a>
-                    <a href="mailto:your.email@example.com" class="social-btn mail"><i data-lucide="mail"></i></a>
-                </div>
-                <div class="location"><i data-lucide="map-pin"></i> NOIDA, IN</div>
-            </div>
-        </div>
-
     </main>
 </body>
 

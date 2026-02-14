@@ -1,4 +1,9 @@
-const portfolioData = {
+/**
+ * Portfolio data – single source for content.
+ * Edit this file to update quotes, projects, experience, and skills.
+ */
+
+const PortfolioData = {
     quotes: [
         { text: "Hello, Friend. System initialized.", source: "Mr. Robot" },
         { text: "I am the one who knocks.", source: "Breaking Bad" },
@@ -6,6 +11,7 @@ const portfolioData = {
         { text: "Go beyond! Plus Ultra!", source: "My Hero Academia" },
         { text: "If you don't fight, you can't win.", source: "Attack on Titan" }
     ],
+
     projects: [
         {
             title: "ConnectCEOBot",
@@ -32,6 +38,7 @@ const portfolioData = {
             tags: ["OCR", "Automation", "Finance Ops"]
         }
     ],
+
     experience: [
         {
             role: "Senior Executive",
@@ -46,10 +53,11 @@ const portfolioData = {
             desc: "Contributed to Tax & Forensic real-time ML projects. Focused on Azure Cloud DevOps, middleware development, and API lifecycle management."
         }
     ],
+
     skills: {
-        "CORE_AI": ["Azure AI Foundry", "OpenAI", "LangChain", "Copilot Studio", "MCP Framework"],
-        "BACKEND": ["Python", "FastAPI", "Django", ".NET", "REST APIs"],
-        "CLOUD_OPS": ["Azure Functions", "CosmosDB", "Docker", "Git/TFS", "CI/CD"],
-        "DATA": ["Pandas", "NumPy", "PyTorch", "OpenCV", "Scikit-Learn"]
+        CORE_AI: ["Azure AI Foundry", "OpenAI", "LangChain", "Copilot Studio", "MCP Framework"],
+        BACKEND: ["Python", "FastAPI", "Django", ".NET", "REST APIs"],
+        CLOUD_OPS: ["Azure Functions", "CosmosDB", "Docker", "Git/TFS", "CI/CD"],
+        DATA: ["Pandas", "NumPy", "PyTorch", "OpenCV", "Scikit-Learn"]
     }
 };

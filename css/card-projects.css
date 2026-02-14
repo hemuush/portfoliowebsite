@@ -1,0 +1,80 @@
+/**
+ * Active missions / projects grid card.
+ */
+
+.projects-scroll {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 10px;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.p-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.p-title {
+    font-weight: bold;
+    color: var(--text-main);
+    font-size: 0.85rem;
+}
+
+.p-type {
+    font-size: 0.6rem;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.p-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.p-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.p-tags span {
+    font-size: 0.6rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--text-muted);
+}
+
+body.theme-light .project-card {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.theme-light .p-tags span {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 767px) {
+    .projects-scroll {
+        grid-template-columns: 1fr;
+    }
+}

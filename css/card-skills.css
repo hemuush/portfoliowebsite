@@ -1,0 +1,34 @@
+/**
+ * Skills / neural arsenal card.
+ */
+
+.skills-wrapper {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+}
+
+.skill-cat-title {
+    font-size: 0.7rem;
+    color: var(--secondary);
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-muted);
+}

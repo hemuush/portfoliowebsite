@@ -1,0 +1,41 @@
+/**
+ * Trajectory / experience list card.
+ */
+
+.exp-list {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+}
+
+.exp-item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+}
+
+.exp-role {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.exp-co {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    display: block;
+    margin: 4px 0;
+}
+
+.exp-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}

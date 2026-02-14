@@ -1,4 +1,6 @@
-/* --- HERO --- */
+/* css/components.css - COMPLETE FILE */
+
+/* --- HERO CARD --- */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -7,76 +9,87 @@
 }
 
 .profile-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
     position: relative;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
     object-fit: cover;
+    display: block;
 }
 
-h1 {
+.glitch-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent 65%, var(--primary) 100%);
+    opacity: 0.5;
+}
+
+h1.glitch-text {
     font-family: var(--font-heading);
     font-size: 3rem;
     margin-bottom: 10px;
+    line-height: 1;
 }
 
 .role-text {
     color: var(--primary);
     font-family: var(--font-heading);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
 .hero-bio {
     color: var(--text-muted);
-    max-width: 450px;
+    max-width: 500px;
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .badge-status {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 255, 157, 0.1);
+    top: 20px; right: 20px;
+    background: rgba(0,255,157,0.1);
     color: var(--accent);
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.7rem;
     font-family: var(--font-heading);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .pulse {
-    width: 6px;
-    height: 6px;
+    width: 8px; height: 8px;
     background: var(--accent);
     border-radius: 50%;
+    box-shadow: 0 0 5px var(--accent);
     animation: blink 2s infinite;
 }
 
-/* --- LOGS --- */
+/* --- SYSTEM LOGS CARD --- */
 #quote-display {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 0.9rem;
     border-left: 2px solid var(--secondary);
     padding-left: 15px;
     display: flex;
     align-items: center;
-    line-height: 1.4;
     height: 100%;
 }
 
-/* --- STATS --- */
+/* --- STATS CARD --- */
 .cell-stats .glass-pane {
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .stat-item {
@@ -85,37 +98,98 @@ h1 {
 
 .stat-val {
     display: block;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--text-main);
 }
 
 .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     color: var(--text-muted);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-/* --- FIX 2: PROJECTS (ACTIVE MISSIONS) --- */
+/* --- TRAJECTORY CARD --- */
+.exp-list {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+}
+
+.exp-item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.exp-role {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.exp-co {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    display: block;
+    margin: 4px 0;
+}
+
+.exp-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* --- SKILLS CARD --- */
+.skills-wrapper {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+}
+
+.skill-cat-title {
+    font-size: 0.7rem; color: var(--secondary);
+    margin-bottom: 5px; font-family: var(--font-heading);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill-tag {
+    font-size: 0.7rem; padding: 3px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.02);
+    color: var(--text-muted);
+}
+
+/* --- ACTIVE MISSIONS CARD (2x2 Grid) --- */
 .projects-scroll {
     display: grid;
-    /* Creates two columns that fill the space */
-    grid-template-columns: repeat(2, 1fr);
-    /* Allows for multiple rows */
-    grid-template-rows: auto auto;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr; /* 2 Columns */
+    grid-auto-rows: min-content;    /* Rows fit content */
+    gap: 10px;
     height: 100%;
     overflow-y: auto;
-    /* Change from overflow-x to overflow-y */
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .project-card {
-    /* Remove 'flex: 0 0 280px' to allow grid to control sizing */
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid transparent;
+    background: rgba(255,255,255,0.03);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
     display: flex;
     flex-direction: column;
 }
@@ -124,30 +198,29 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+    align-items: center;
 }
 
 .p-title {
-    color: var(--text-main);
     font-weight: bold;
+    color: var(--text-main);
+    font-size: 0.85rem;
 }
 
 .p-type {
     font-size: 0.6rem;
     color: var(--primary);
     border: 1px solid var(--primary);
-    padding: 2px 6px;
+    padding: 2px 4px;
     border-radius: 4px;
 }
 
 .p-desc {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
-    margin-bottom: 12px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.4;
     flex-grow: 1;
-    /* Pushes tags to the bottom */
-    white-space: normal;
-    /* Ensures text wraps properly */
 }
 
 .p-tags {
@@ -157,81 +230,51 @@ h1 {
 }
 
 .p-tags span {
-    font-size: 0.65rem;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 3px 8px;
+    font-size: 0.6rem;
+    background: rgba(255,255,255,0.08);
+    padding: 2px 6px;
     border-radius: 4px;
     color: var(--text-muted);
 }
 
-/* --- SKILLS & EXP --- */
-.skills-wrapper,
-.exp-list {
-    overflow-y: auto;
-    padding-right: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+/* --- CONTACT CARD --- */
+.cell-contact .glass-pane {
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
-.skill-cat-title {
-    font-size: 0.75rem;
-    color: var(--secondary);
-    margin-bottom: 8px;
-    font-family: var(--font-heading);
-}
-
-.skill-tags {
+.social-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    gap: 20px;
 }
 
-.skill-tag {
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.exp-item {
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.exp-role {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.exp-co {
-    color: var(--primary);
-    font-size: 0.85rem;
-    font-family: var(--font-heading);
-    display: block;
-    margin-bottom: 8px;
-}
-
-.exp-desc {
-    font-size: 0.85rem;
+.social-btn {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    display: flex; align-items: center; justify-content: center;
     color: var(--text-muted);
-    line-height: 1.5;
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.location {
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    display: flex; align-items: center; gap: 8px;
 }
 
 /* --- BOOT SEQUENCE --- */
 #boot-sequence {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 9999;
-    display: flex;
-    padding: 40px;
-    font-family: 'Space Mono';
-    color: var(--accent);
-    font-size: 14px;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: #000; z-index: 9999;
+    display: flex; padding: 40px;
+    font-family: 'Space Mono'; color: var(--accent); font-size: 14px;
 }

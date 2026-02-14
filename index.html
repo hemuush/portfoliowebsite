@@ -64,17 +64,16 @@
     <main class="bento-grid">
         <div class="cell cell-hero">
             <div class="glass-pane">
-                <div class="badge-status"><span class="pulse"></span> ONLINE</div>
+                <div class="badge-status"><span class="pulse"></span> <span id="hero-badge"></span></div>
                 <div class="hero-content">
                     <div class="profile-img-wrapper">
-                        <img src="Hemant Sharma.jpg" alt="Hemant Sharma" class="profile-img">
+                        <img id="hero-image" src="" alt="" class="profile-img">
                         <div class="glitch-overlay"></div>
                     </div>
                     <div>
-                        <h1 class="glitch-text">HEMANT SHARMA</h1>
-                        <p class="role-text">> AI ARCHITECT // FULL STACK</p>
-                        <p class="hero-bio">Building intelligent systems that scale. Specializing in Azure AI, GenAI
-                            Agents, and Enterprise Automation.</p>
+                        <h1 class="glitch-text" id="hero-name"></h1>
+                        <p class="role-text" id="hero-role"></p>
+                        <p class="hero-bio" id="hero-bio"></p>
                     </div>
                 </div>
             </div>
@@ -82,7 +81,7 @@
 
         <div class="cell cell-logs">
             <div class="glass-pane">
-                <div class="cell-header"><i data-lucide="terminal-square"></i><span>SYSTEM_LOGS</span></div>
+                <div class="cell-header"><i data-lucide="terminal-square"></i><span id="section-logs"></span></div>
                 <div class="quote-container" id="quote-display"></div>
             </div>
         </div>
@@ -90,56 +89,63 @@
         <div class="cell-stack cell-stack-right">
             <div class="cell cell-exp">
                 <div class="glass-pane">
-                    <div class="cell-header"><i data-lucide="briefcase"></i><span>TRAJECTORY</span></div>
+                    <div class="cell-header"><i data-lucide="briefcase"></i><span id="section-trajectory"></span></div>
                     <div class="exp-list" id="exp-container"></div>
-                </div>
-            </div>
-            <div class="cell cell-contact">
-                <div class="glass-pane">
-                    <div class="social-links">
-                        <a href="https://github.com/hemuush" target="_blank" class="social-btn github"><i
-                                data-lucide="github"></i></a>
-                        <a href="https://linkedin.com/in/hemuush" target="_blank" class="social-btn linkedin"><i
-                                data-lucide="linkedin"></i></a>
-                        <a href="mailto:your.email@example.com" class="social-btn mail"><i data-lucide="mail"></i></a>
-                    </div>
-                    <div class="location"><i data-lucide="map-pin"></i> NOIDA, IN</div>
                 </div>
             </div>
         </div>
 
         <div class="cell cell-stats">
             <div class="glass-pane">
-                <div class="cell-header"><i data-lucide="bar-chart-2"></i><span>METRICS</span></div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <i data-lucide="calendar"></i>
-                        <span class="stat-val">3.5+</span>
-                        <span class="stat-label">YRS EXP</span>
-                    </div>
-                    <div class="stat-item">
-                        <i data-lucide="folder-git-2"></i>
-                        <span class="stat-val">10+</span>
-                        <span class="stat-label">PROJECTS</span>
-                    </div>
-                </div>
+                <div class="cell-header"><i data-lucide="bar-chart-2"></i><span id="section-metrics"></span></div>
+                <div class="stats-grid" id="stats-container"></div>
             </div>
         </div>
 
         <div class="cell cell-skills">
             <div class="glass-pane">
-                <div class="cell-header"><i data-lucide="cpu"></i><span>NEURAL_ARSENAL</span></div>
+                <div class="cell-header"><i data-lucide="cpu"></i><span id="section-skills"></span></div>
                 <div class="skills-wrapper" id="skills-container"></div>
             </div>
         </div>
 
         <div class="cell cell-projects">
             <div class="glass-pane">
-                <div class="cell-header"><i data-lucide="folder-git-2"></i><span>ACTIVE_MISSIONS</span></div>
+                <div class="cell-header"><i data-lucide="folder-git-2"></i><span id="section-projects"></span></div>
                 <div class="projects-scroll" id="projects-container"></div>
             </div>
         </div>
+
+        <div class="cell cell-contact">
+            <div class="glass-pane">
+                <div class="social-links" id="contact-links"></div>
+                <div class="location" id="contact-location"></div>
+            </div>
+        </div>
     </main>
+
+    <div id="exp-modal" class="exp-modal" aria-hidden="true">
+        <div class="exp-modal-backdrop"></div>
+        <div class="exp-modal-content">
+            <button type="button" class="exp-modal-close" aria-label="Close">&times;</button>
+            <div class="exp-modal-role" id="exp-modal-role"></div>
+            <div class="exp-modal-co" id="exp-modal-co"></div>
+            <div class="exp-modal-desc" id="exp-modal-desc"></div>
+        </div>
+    </div>
+
+    <div id="project-modal" class="project-modal" aria-hidden="true">
+        <div class="project-modal-backdrop"></div>
+        <div class="project-modal-content">
+            <button type="button" class="project-modal-close" aria-label="Close">&times;</button>
+            <div class="project-modal-header">
+                <div class="project-modal-title" id="project-modal-title"></div>
+                <div class="project-modal-status" id="project-modal-status"></div>
+            </div>
+            <div class="project-modal-desc" id="project-modal-desc"></div>
+            <div class="project-modal-tags" id="project-modal-tags"></div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -40,10 +40,16 @@ const App = {
             return;
         }
 
-        Renderer.quotes(PortfolioData.quotes);
-        Renderer.projects(PortfolioData.projects);
-        Renderer.skills(PortfolioData.skills);
-        Renderer.experience(PortfolioData.experience);
+        const d = PortfolioData;
+        Renderer.pageTitle(d.pageTitle);
+        Renderer.sections(d.sections);
+        Renderer.hero(d.hero);
+        Renderer.stats(d.stats);
+        Renderer.contact(d.contact);
+        Renderer.quotes(d.quotes);
+        Renderer.projects(d.projects);
+        Renderer.skills(d.skills);
+        Renderer.experience(d.experience);
 
         if (typeof lucide !== "undefined") {
             lucide.createIcons();

@@ -35,7 +35,7 @@ body.theme-light .cyber-grid {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: var(--h-logs) var(--h-middle) var(--h-bottom);
+    grid-template-rows: var(--h-logs) var(--h-middle) calc(var(--h-bottom) - var(--h-contact-min)) var(--h-contact-min);
     gap: var(--grid-gap);
     width: var(--dashboard-width);
     height: auto;
@@ -59,7 +59,7 @@ body.theme-light .cyber-grid {
     grid-row: 2 / 3;
 }
 
-/* Right column: Trajectory (large) + Contact (small) in one stack */
+/* Right column: Trajectory stack (rows 2–3) + Contact (row 4) */
 .cell-stack-right {
     grid-column: 4 / 5;
     grid-row: 2 / 4;
@@ -74,25 +74,26 @@ body.theme-light .cyber-grid {
     min-height: 0;
 }
 
-.cell-stack-right .cell-contact {
-    flex: 0 0 auto;
-    min-height: var(--h-contact-min);
+.cell-contact {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
 }
 
 .cell-skills {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
 }
 
 .cell-projects {
     grid-column: 2 / 4;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
 }
 
 /* ========== RESPONSIVE: Tablet (768px – 1024px) ========== */
 @media (max-width: 1024px) {
     body {
         height: auto;
+        min-height: 100vh;
         overflow-y: auto;
         overflow-x: hidden;
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -108,19 +109,35 @@ body.theme-light .cyber-grid {
         gap: 12px;
     }
 
+    /* Reset grid placement so flex order controls flow */
+    .cell-hero,
+    .cell-logs,
+    .cell-stats,
+    .cell-stack-right,
+    .cell-skills,
+    .cell-projects,
+    .cell-contact {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    /* Mobile/tablet: Contact last (after Projects) */
     .cell-hero { order: 1; }
     .cell-logs { order: 2; }
     .cell-stats { order: 3; }
-    .cell-stack-right { order: 4; min-height: 320px; }
+    .cell-stack-right { order: 4; flex: 0 0 auto; min-height: 320px; }
     .cell-skills { order: 5; }
     .cell-projects { order: 6; }
+    .cell-contact { order: 7; }
 
     .cell {
         min-height: 220px;
         height: auto;
+        min-width: 0; /* allow flex children to shrink */
     }
 
     .cell-stack-right .cell-exp {
+        flex: 1 1 auto;
         min-height: 200px;
     }
 }

@@ -7,6 +7,12 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    min-height: 0;
+}
+
+/* Text block in hero – allow shrink in row layout */
+.cell-hero .hero-content > div:last-child {
+    min-width: 0;
 }
 
 .profile-img-wrapper {
@@ -94,10 +100,16 @@ body.theme-light .badge-status {
         align-items: center;
     }
 
+    .cell-hero .hero-content > div:last-child {
+        flex: 1;
+        min-width: 0;
+    }
+
     .profile-img-wrapper {
         width: 80px;
         height: 80px;
         margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .cell-hero h1.glitch-text {
@@ -110,6 +122,7 @@ body.theme-light .badge-status {
 
     .cell-hero .hero-bio {
         font-size: 0.85rem;
+        max-width: none;
     }
 }
 

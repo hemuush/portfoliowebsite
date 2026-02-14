@@ -1,178 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hemant Sharma - AI Architect & Full Stack Developer Portfolio">
-  <title>Hemant Sharma | Neural Interface</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemant Sharma — AI Architect</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css" />
-  
+  <link rel="stylesheet" href="styles.css">
   <script src="portfoliodata.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
-
-  <div class="ambient-glow"></div>
-
-  <nav class="mobile-nav">
-    <div class="logo">ROOT@HEMANT_OS:~</div>
-    <button id="mobile-menu-toggle" aria-label="Toggle Menu">
-      <i class="fas fa-bars"></i>
-    </button>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-logo">HS</div>
+      <div class="nav-links">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <div class="mobile-menu-overlay" id="mobile-menu">
-    <div class="mobile-links">
-      <a href="#hero" class="m-link">Core</a>
-      <a href="#projects" class="m-link">Deployments</a>
-      <a href="#skills" class="m-link">Neural_Net</a>
-      <a href="#experience" class="m-link">Logs</a>
-      <a href="#contact" class="m-link">Uplink</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">AI Architect / Full Stack Engineer</div>
+        <h1 class="hero-title">
+          Building intelligent<br>
+          systems that scale
+        </h1>
+        <p class="hero-description">
+          Currently Senior Executive at Grant Thornton, specializing in Azure Cloud Architecture, 
+          GenAI solutions, and enterprise automation. Focused on MCP Framework and Cognitive AI.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">3.5+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">10+</div>
+            <div class="stat-label">AI Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Companies</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="app-grid">
-    
-    <aside class="sidebar-pane">
-      <div class="terminal-window">
-        <div class="term-header">
-          <div class="traffic-lights">
-            <span class="light red"></span>
-            <span class="light yellow"></span>
-            <span class="light green"></span>
-          </div>
-          <div class="term-title">root@hemant_os:~</div>
-        </div>
-        
-        <div class="term-body" id="term-logs">
-          </div>
-
-        <div class="term-input-area">
-          <span class="prompt">➜</span>
-          <span class="path">~</span>
-          <input type="text" id="cmd-input" placeholder="Type 'help'..." autocomplete="off">
-        </div>
+  <!-- Projects Section -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-subtitle">Recent projects and deployments</p>
       </div>
+      <div class="projects-grid" id="projects-container">
+        <!-- Projects will be injected here -->
+      </div>
+    </div>
+  </section>
 
-      <nav class="system-modules">
-        <button class="mod-btn" data-target="hero">
-          <i class="fas fa-microchip"></i> <span>CORE</span>
-          <span class="status-dot"></span>
-        </button>
-        <button class="mod-btn" data-target="projects">
-          <i class="fas fa-rocket"></i> <span>DEPLOYMENTS</span>
-          <span class="status-dot"></span>
-        </button>
-        <button class="mod-btn" data-target="skills">
-          <i class="fas fa-network-wired"></i> <span>NEURAL_NET</span>
-          <span class="status-dot"></span>
-        </button>
-        <button class="mod-btn" data-target="experience">
-          <i class="fas fa-history"></i> <span>LOGS</span>
-          <span class="status-dot"></span>
-        </button>
-        <button class="mod-btn" data-target="contact">
-          <i class="fas fa-satellite-dish"></i> <span>UPLINK</span>
-          <span class="status-dot"></span>
-        </button>
-      </nav>
-    </aside>
-
-    <main class="content-pane">
-      
-      <header class="glass-header">
-        <div class="user-badge">
-          <div class="avatar-frame">
-            <img src="Hemant Sharma.jpg" alt="Profile" loading="lazy">
-          </div>
-          <div class="user-meta">
-            <span class="name">Hemant Sharma</span>
-            <span class="role">AI Architect // Full Stack</span>
+  <!-- About Section -->
+  <section id="about" class="section section-gray">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Skills -->
+        <div class="about-card">
+          <h3 class="about-card-title">Technical Skills</h3>
+          <div class="skills-container" id="skills-container">
+            <!-- Skills will be injected here -->
           </div>
         </div>
-        <a href="#contact" class="cta-mini">Contact <i class="fas fa-arrow-right"></i></a>
-      </header>
 
-      <div class="scroll-container">
-        
-        <section id="hero" class="data-section active">
-          <div class="section-label">01 // INITIALIZATION</div>
-          <h1 class="glitch-header">BUILDING <br> INTELLIGENT SYSTEMS</h1>
-          <p class="bio-text">
-            I bridge the gap between <strong>complex backend logic</strong> and <strong>cognitive AI agents</strong>. 
-            Transforming raw data into actionable intelligence.
+        <!-- Experience -->
+        <div class="about-card">
+          <h3 class="about-card-title">Experience</h3>
+          <div class="experience-list" id="experience-container">
+            <!-- Experience will be injected here -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-content">
+          <h2 class="contact-title">Let's work together</h2>
+          <p class="contact-description">
+            Open to consulting opportunities, collaborations, and full-time roles 
+            in AI/ML engineering and cloud architecture.
           </p>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <span class="val">3.5+</span>
-              <span class="lbl">YEARS EXP</span>
-            </div>
-            <div class="stat-card">
-              <span class="val">10+</span>
-              <span class="lbl">MODELS</span>
-            </div>
-            <div class="stat-card">
-              <span class="val">100%</span>
-              <span class="lbl">UPTIME</span>
-            </div>
+          
+          <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">your.email@example.com</span>
+            </a>
+            <a href="https://linkedin.com/in/hemuush" target="_blank" class="contact-link">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/hemuush</span>
+            </a>
+            <a href="https://github.com/hemuush" target="_blank" class="contact-link">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/hemuush</span>
+            </a>
           </div>
-        </section>
-
-        <section id="projects" class="data-section">
-          <div class="section-label">02 // ACTIVE DEPLOYMENTS</div>
-          <div class="bento-grid" id="projects-container">
-            </div>
-        </section>
-
-        <section id="skills" class="data-section">
-          <div class="section-label">03 // NEURAL CAPABILITIES</div>
-          <div class="skills-grid" id="skills-container">
-            </div>
-        </section>
-
-        <section id="experience" class="data-section">
-          <div class="section-label">04 // SYSTEM HISTORY</div>
-          <div class="timeline-feed" id="experience-container">
-            </div>
-        </section>
-
-        <section id="contact" class="data-section">
-          <div class="section-label">05 // ESTABLISH UPLINK</div>
-          <div class="contact-terminal">
-            <p class="term-msg">Ready to initiate handshake protocol?</p>
-            <form id="contact-form">
-              <div class="input-group">
-                <input type="text" placeholder="IDENTITY (Name)" required>
-              </div>
-              <div class="input-group">
-                <input type="email" placeholder="SIGNAL FREQUENCY (Email)" required>
-              </div>
-              <div class="input-group">
-                <textarea rows="3" placeholder="DATA PACKET (Message)" required></textarea>
-              </div>
-              <button type="submit" class="run-btn">
-                <i class="fas fa-terminal"></i> EXECUTE SEND()
-              </button>
-            </form>
-            <div class="social-row">
-              <a href="https://linkedin.com/in/hemuush" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              <a href="https://github.com/hemuush" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </section>
-
-        <footer>
-          <p>SYSTEM STATUS: ONLINE // © 2026 HEMANT SHARMA</p>
-        </footer>
-
+        </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">© 2026 Hemant Sharma</div>
+        <div class="footer-text">Designed & Developed by HS</div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

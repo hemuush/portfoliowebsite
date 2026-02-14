@@ -1,5 +1,5 @@
 const portfolioData = {
-    // SYSTEM QUOTES (TV Shows)
+    // SYSTEM QUOTES (Retaining your Anime Theme)
     quotes: {
         "boot": { text: "Hello, Friend. System initialized.", source: "Mr. Robot" },
         "projects": { text: "I am the one who knocks.", source: "Breaking Bad" },
@@ -7,52 +7,56 @@ const portfolioData = {
         "skills": { text: "Go beyond! Plus Ultra!", source: "My Hero Academia" },
         "contact": { text: "If you don't fight, you can't win.", source: "Attack on Titan" }
     },
-    // PROJECTS
+
+    // PROJECTS (Synced with Resume)
     projects: [
         {
-            title: "Autonomous HR Agent",
+            title: "ConnectCEOBot",
+            status: "LIVE",
+            desc: "AI chatbot on Azure AI Foundry simulating CEO interactions. Features custom voice cloning and CosmosDB auto-refresh pipelines.",
+            tags: ["Azure AI Foundry", "CosmosDB", "Voice AI"]
+        },
+        {
+            title: "KBOT-AI (HR Assistant)",
             status: "DEPLOYED",
-            desc: "A cognitive agent using Tool Calling to automate HR workflows. It executes tasks autonomously.",
-            tags: ["LangChain", "OpenAI", "Azure"]
+            desc: "GenAI HR assistant integrated with MS Teams. Automates policy queries, leave requests, and holiday info.",
+            tags: ["Python", ".NET", "Azure OpenAI", "MS Teams"]
         },
         {
-            title: "Integrated GST Suite",
-            status: "PROD",
-            desc: "High-precision financial tool for mass tax filing. 99.1% code purity.",
-            tags: ["Python", ".NET", "SQL"]
-        },
-        {
-            title: "RAG Knowledge Engine",
-            status: "BETA",
-            desc: "Ingesting thousands of documents for instant semantic retrieval.",
-            tags: ["Vector DB", "Embeddings", "FastAPI"]
-        },
-        {
-            title: "Resume Parser Bot",
+            title: "BackcheckAI",
             status: "V1.0",
-            desc: "NLP pipeline to extract entities and match candidates with precision.",
-            tags: ["Spacy", "ML", "Python"]
+            desc: "Risk-assessment tool automating data extraction, sentiment analysis, and risk tagging for background checks.",
+            tags: ["NLP", "Risk Analysis", "Python"]
+        },
+        {
+            title: "Expense Automation",
+            status: "PROD",
+            desc: "OCR-based system for invoice data extraction, optimizing manual financial workflows.",
+            tags: ["OCR", "Automation", "Finance Ops"]
         }
     ],
-    // EXPERIENCE
+
+    // EXPERIENCE (Synced with Resume)
     experience: [
         {
             role: "Senior Executive",
-            company: "Walker Chandiok & Co",
-            date: "2024 - Present",
-            desc: "Leading the realm of AI forensic tools. Securing the perimeter."
+            company: "Walker Chandiok & Co LLP",
+            date: "12/2024 - Present",
+            desc: "Building GenAI agents using MCP framework and Copilot Studio. Delivered scalable solutions like ConnectCEOBot and Expense Automation."
         },
         {
             role: "Analyst",
             company: "KPMG India",
-            date: "2022 - 2024",
-            desc: "The origin story. Built the GST suite and pioneered internal GenAI chatbots."
+            date: "01/2022 - 11/2024",
+            desc: "Contributed to Tax & Forensic real-time ML projects. Focused on Azure Cloud DevOps, middleware development, and API lifecycle management."
         }
     ],
-    // SKILLS
+
+    // SKILLS (Synced with Resume)
     skills: {
-        "NEURAL_NETWORKS": ["OpenAI API", "LangChain", "LlamaIndex", "Vector DBs"],
-        "BACKEND_CORE": ["Python", "Django", "FastAPI", "Microservices"],
-        "INFRASTRUCTURE": ["Azure AI", "Docker", "Kubernetes", "CI/CD"]
+        "AI_&_GEN_AI": ["Azure AI Foundry", "OpenAI", "LangChain", "Copilot Studio", "MCP Framework"],
+        "BACKEND_CORE": ["Python", "FastAPI", "Django", ".NET", "REST APIs"],
+        "CLOUD_&_DEVOPS": ["Azure Functions", "CosmosDB", "Docker", "Git/TFS", "CI/CD"],
+        "DATA_SCIENCE": ["Pandas", "NumPy", "PyTorch", "OpenCV", "Scikit-Learn"]
     }
 };
